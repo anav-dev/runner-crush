@@ -19,29 +19,58 @@
     <header>
         <nav>
             <a href="#" id="logo"><img src="assets/images/logo.png" alt="Runner Crush logo"></a>
-            
+            <a href="contact.html"><i class="fa-regular fa-envelope"></i></a>
+
             <ul id="menu">
                 <li><a href="contact.html">Contact</a></li>
-                <li><a href="#faq" class="menulink-faq">FAQ</a></li>
             </ul>
-
         </nav>
     </header>
     <!-- main section -->
     <main>
         <div class="box-container">
             <h1>Runner Crush</h1>
+
             <div class="box bg-blue-light">
-                <div class="box-play"><a href="">Let's Play</a></div>
+                <a href="game.html" class="box-content hover-blue">
+                    <div class="box-img"><i class="fa-solid fa-play"></i></div>
+                    <div class="box-text"><h3 class="hover-blue">Let's Play</h3></div>
+                </a>
             </div>
+
             <div class="box bg-yellow">
-                <div class="box-img">Image</div>
-                <div class="box-text">Instructions</div>                
+                <a href="" class="box-content hover-blue">
+                    <div class="box-img"><i class="fa-regular fa-file-lines"></i></div> 
+                    <div class="box-text">
+                    <h3 class="hover-blue">Instructions<i class="fa-solid fa-angle-down"></i></h3>
+                </div> 
+                </a>
             </div>
+
+            <div class="box dropdown-menu">
+                <ul class="dropdown-content">
+                  <li><p><i class="fa-solid fa-angle-right"></i>Some text</p></li>
+                  <li><p><i class="fa-solid fa-angle-right"></i>Some text</p></li>
+                  <li><p><i class="fa-solid fa-angle-right"></i>Some text</p></li>
+                 </ul>
+            </div> 
+            
             <div class="box bg-blue-dark">
-                <div class="box-img">Image</div>
-                <div class="box-text">FAQ</div> 
+                <a href="" class="box-content hover-blue-light">
+                    <div class="box-img"><i class="fa-regular fa-circle-question"></i></div>
+                    <div class="box-text">
+                        <h3 class="hover-blue-light">FAQ<i class="fa-solid fa-angle-down"></i></h3>
+                    </div> 
+                </a>
             </div>
+
+            <div class="box dropdown-menu">
+                <ul class="dropdown-content">
+                  <li><p><i class="fa-solid fa-angle-right"></i>Some test</p></li>
+                  <li><p><i class="fa-solid fa-angle-right"></i>Some text</p></li>
+                  <li><p><i class="fa-solid fa-angle-right"></i>Some text</p></li>
+                 </ul>
+            </div> 
         </div>
     </main>
     <!-- footer section -->
@@ -50,6 +79,10 @@
             <p>© 2024, anav-dev</p>
         </div>   
     </footer> 
+
+    <!-- fontawesome -->
+    <script src="https://kit.fontawesome.com/2fdf17b0b9.js" crossorigin="anonymous"></script>
+
     <!-- JS file -->
     <script src="assets/js/script.js"></script>
 </body>
