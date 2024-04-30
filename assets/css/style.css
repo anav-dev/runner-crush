@@ -195,20 +195,47 @@ footer {
 
 /*** Game Page ***/
 .game-container {
-    width: 100%;
-}
-.game-bar {
-    height: 120px;
-}
-.game-content {
-    min-height: 78vh;
-}
-.game-bar,
-.game-content {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    width: 100%;
 }
+.score-bar {
+    height: 100px;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;   
+    padding: 1rem;
+    font-size: 26px;
+}
+.score-bar div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+/* Code inspiration source: Ania Kubow tutorial */
+.grid {
+    height: 780px;
+    width: 880px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 10px 0 0 0;
+}
+.grid div {
+    height: 100px;
+    width: 100px;
+    background-color: rgb(255, 255, 255, 0.1);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    border-radius: 6px;
+}
+
 /*** Contact Page ***/
 .form {
     max-width: 600px;
@@ -340,11 +367,34 @@ textarea {
     .dropdown-content li i {
         font-size: 20px;
     }
+
+    /* game page */
+    .game-container {
+        padding: 1rem 0;
+    }
+    .score-bar {
+        height: 80px;
+    }
+    .score-bar div {
+        font-size: 20px;
+    }
+
+    .grid {
+        width: 95%;
+        height: 660px;
+        padding: 0 0 10px 0;
+    }
+    .grid div {   
+        width: 80px;
+    }
 } 
 
 /* small screen*/
 @media screen and (max-width: 767px) {
-  
+    /* game page */
+    .grid div {   
+        height: auto;
+    }
 }
 
 /* tablet screens */
