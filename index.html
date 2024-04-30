@@ -38,37 +38,41 @@
                 </a>
             </div>
 
-            <div class="box bg-yellow">
-                <a href="" class="box-content hover-blue">
-                    <div class="box-img"><i class="fa-regular fa-file-lines"></i></div> 
+            <div class="box bg-yellow" onclick="openDropdownInstructions()">
+                <div class="box-content hover-blue">
+                    <div class="box-img"><i class="fa-regular fa-file-lines"></i></div>
                     <div class="box-text">
-                    <h3 class="hover-blue">Instructions<i class="fa-solid fa-angle-down"></i></h3>
-                </div> 
-                </a>
+                        <h3 class="hover-blue">Instructions<i class="fa-solid fa-angle-down"></i><i class="fa-solid fa-xmark"></i></h3>
+                    </div>
+                </div>
             </div>
 
-            <div class="box dropdown-menu">
+            <div class="box dropdown-menu" id="dropdownInstructions">
                 <ul class="dropdown-content">
-                  <li><p><i class="fa-solid fa-angle-right"></i>Some text</p></li>
-                  <li><p><i class="fa-solid fa-angle-right"></i>Some text</p></li>
-                  <li><p><i class="fa-solid fa-angle-right"></i>Some text</p></li>
+                  <li><p><i class="fa-solid fa-angle-right"></i><span>begin:</span> Tap the Let's Play button.</p></li>
+                  <li><p><i class="fa-solid fa-angle-right"></i><span>search:</span> Look for runner objects that are the same.</p></li>
+                  <li><p><i class="fa-solid fa-angle-right"></i><span>match:</span> Pair up as many objects as you can.</p></li>
+                  <li><p><i class="fa-solid fa-angle-right"></i><span>time:</span> Keep an eye on the clock countdown.</p></li>
                  </ul>
             </div> 
             
-            <div class="box bg-blue-dark">
-                <a href="" class="box-content hover-blue-light">
+            <div class="box bg-blue-dark" onclick="openDropdownFaq()">
+                <div class="box-content hover-blue-light">
                     <div class="box-img"><i class="fa-regular fa-circle-question"></i></div>
                     <div class="box-text">
-                        <h3 class="hover-blue-light">FAQ<i class="fa-solid fa-angle-down"></i></h3>
+                        <h3 class="hover-blue-light">FAQ<i class="fa-solid fa-angle-down"></i><i class="fa-solid fa-xmark"></i></h3>
                     </div> 
-                </a>
+                </div>
             </div>
 
-            <div class="box dropdown-menu">
+            <div class="box dropdown-menu" id="dropdownFaq">
                 <ul class="dropdown-content">
-                  <li><p><i class="fa-solid fa-angle-right"></i>Some test</p></li>
-                  <li><p><i class="fa-solid fa-angle-right"></i>Some text</p></li>
-                  <li><p><i class="fa-solid fa-angle-right"></i>Some text</p></li>
+                  <li><p><i class="fa-solid fa-angle-right"></i><span>What's the number limit of times I can play?</span></p></li>
+                  <li><p><i class="fa-solid fa-minus"></i></i>You're welcome to play as many times as you'd like.</p></li>
+                  <li><p><i class="fa-solid fa-angle-right"></i><span>How do I match objects?</span></p></li>
+                  <li><p><i class="fa-solid fa-minus"></i></i>Finding matching pairs and dragging them together.</p></li>
+                  <li><p><i class="fa-solid fa-angle-right"></i><span>I've found a bug</span></p></li>
+                  <li><p><i class="fa-solid fa-minus"></i>Feel free to reach out to me through the<span></span><a href="contact.html"> contact page.</a></p></li>
                  </ul>
             </div> 
         </div>
