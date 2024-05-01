@@ -170,7 +170,7 @@ main {
     display: none;
     position: relative; 
     width: 100%;
-    min-height: 260px; 
+    min-height: 240px; 
     padding: 0;  
     margin: 0px 0 20px 0;
     color: #06213E;
@@ -385,7 +385,7 @@ textarea {
     }
 
     .dropdown-content li i {
-        font-size: 20px;
+        font-size: 16px;
     }
 
     /* game page */
@@ -411,6 +411,18 @@ textarea {
 
 /* small screen*/
 @media screen and (max-width: 767px) {
+    /* index page */
+    .box-content {
+        padding: 0;
+    }
+    .box-text i {
+        padding: 0 0 0 5px;
+    }
+
+    .dropdown-menu {
+        min-height: 320px;     
+    }
+
     /* game page */
     .grid div {   
         height: auto;
