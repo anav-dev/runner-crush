@@ -71,6 +71,8 @@ document.addEventListener(domLoaded, () =>
         for(let i = 0; i < width * width; i++) //loop over 64 times
         {
             const square = document.createElement('div'); // create new div
+            square.setAttribute('draggable', true); // make square draggable
+            square.setAttribute('id', i); // give id to each square
             let randomObject = Math.floor(Math.random() * runnerObjects.length); // assign random full integer
             square.style.backgroundColor = runnerObjects[randomObject];// passing a number to array
             grid.appendChild(square); // put square into a div with class of grid
