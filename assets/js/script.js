@@ -44,8 +44,34 @@ function openDropdownFaq()
 
 /*** Game Page ***/
 /* Code inspiration source: Ania Kubow tutorial */
+const domLoaded = "DOMContentLoaded";
 
-// 1. create game board 
+// add event listener to the domLoaded variable so HTML file is read and loaded, executes function
+document.addEventListener(domLoaded, () =>
+{
+    //console.info("DOM fully loaded");
+    const grid = document.querySelector('.grid');
+    const width = 4;
+    const squares = []; // empty array to store new created divs added into a grid
+
+    // 1. create game board: a 4x4 grid of div elements with the class "grid"
+    function createBoard() 
+    {
+        for(let i = 0; i < width * width; i++) //loop over 16 times
+        {
+            const square = document.createElement('div'); // create new div
+            grid.appendChild(square); // put square into a div with class of grid
+            squares.push(square); // push square into array
+        } 
+    }
+
+    createBoard();
+
+
+
+})
+
+
   
 // 2. create function to drag objects
 
