@@ -51,15 +51,28 @@ document.addEventListener(domLoaded, () =>
 {
     //console.info("DOM fully loaded");
     const grid = document.querySelector('.grid');
-    const width = 4;
+    const width = 8;
     const squares = []; // empty array to store new created divs added into a grid
 
-    // 1. create game board: a 4x4 grid of div elements with the class "grid"
+    // array with objects
+    const runnerObjects = 
+    [
+        'green',
+        'yellow',
+        'pink',
+        'red',
+        'blue',
+        'purple',       
+    ]
+
+    // 1. create game board: a 8x8 grid of div elements with the class "grid"
     function createBoard() 
     {
-        for(let i = 0; i < width * width; i++) //loop over 16 times
+        for(let i = 0; i < width * width; i++) //loop over 64 times
         {
             const square = document.createElement('div'); // create new div
+            let randomObject = Math.floor(Math.random() * runnerObjects.length); // assign random full integer
+            square.style.backgroundColor = runnerObjects[randomObject];// passing a number to array
             grid.appendChild(square); // put square into a div with class of grid
             squares.push(square); // push square into array
         } 

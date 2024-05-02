@@ -222,7 +222,7 @@ footer {
 .game-container {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    /* justify-content: center; */
     align-items: center;
     width: 100%;
 }
@@ -244,12 +244,12 @@ footer {
 }
 /* Code inspiration source: Ania Kubow tutorial */
 .grid {
-    height: 780px;
+    /* height: 780px; */
     width: 880px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    padding: 10px 0 0 0;
+    padding: 10px 0;
 }
 .grid div {
     height: 100px;
@@ -401,11 +401,6 @@ textarea {
 
     .grid {
         width: 95%;
-        height: 660px;
-        padding: 0 0 10px 0;
-    }
-    .grid div {   
-        width: 80px;
     }
 } 
 
@@ -425,12 +420,17 @@ textarea {
 
     /* game page */
     .grid div {   
-        height: auto;
+        width: 60px;
+        height: 60px;
     }
 }
 
 /* tablet screens */
 @media screen and (min-width: 768px) and (max-width: 1023px) {
+    /* game page */
+    .grid {   
+        width: 80%;
+    }
 }
 
 @media screen and (min-width: 1024px) and (max-width: 1480px) {
