@@ -15,10 +15,10 @@ function openDropdownInstructions()
         arrow.style.display = 'none'
         xmark.style.display = 'inline-block'
     } else
-    { 
+    {
         xmark.style.display = 'none'
         arrow.style.display = 'inline-block'
-    }    
+    }
 }
 
 function openDropdownFaq()
@@ -34,10 +34,10 @@ function openDropdownFaq()
         arrow.style.display = 'none'
         xmark.style.display = 'inline-block'
     } else
-    { 
+    {
         xmark.style.display = 'none'
         arrow.style.display = 'inline-block'
-    }    
+    }
 }
 
 
@@ -56,18 +56,18 @@ document.addEventListener(domLoaded, () =>
     const squares = []; // empty array to store new created divs added into a grid
 
     // array with objects
-    const runnerObjects = 
+    const runnerObjects =
     [
         'green',
         'white',
         'pink',
         'red',
         'blue',
-        'purple',       
+        'purple',
     ]
 
     // 1. create game board: a 8x8 grid of div elements with the class 'grid'
-    function createBoard() 
+    function createBoard()
     {
         for(let i = 0; i < width * width; i++) //loop over 64 times
         {
@@ -78,19 +78,19 @@ document.addEventListener(domLoaded, () =>
             square.style.backgroundColor = runnerObjects[randomObject];// passing a number to array
             grid.appendChild(square); // put square into a div with class of grid
             squares.push(square); // push square into array
-        } 
+        }
     }
 
     createBoard();
 
     // 2. create function to drag objects
-    // objects variables 
+    // objects variables
     let objectBeingDragged;
     let objectBeingReplaced;
     let squareIdBeingDragged;
     let squareIdBeingReplaced;
 
-    // add in built event listeners to each square element and functions to be called after 
+    // add in built event listeners to each square element and functions to be called after
     squares.forEach(square => square.addEventListener('dragstart', dragStart));
     squares.forEach(square => square.addEventListener('dragend', dragEnd));
     squares.forEach(square => square.addEventListener('dragover', dragOver));
@@ -99,10 +99,10 @@ document.addEventListener(domLoaded, () =>
     squares.forEach(square => square.addEventListener('drop', dragDrop));
 
     // select dragged object's color and square's id integer
-    function dragStart() 
+    function dragStart()
     {
         //console.log(this.id, 'dragstart')
-        
+
         objectBeingDragged = this.style.backgroundColor; // store color dragged into a variable
         //console.log(objectBeingDragged);
         squareIdBeingDragged = parseInt(this.id); // assign square dragged id to this square id integer
@@ -116,7 +116,7 @@ document.addEventListener(domLoaded, () =>
         e.preventDefault();
     }
 
-    // prevent default action when object is placed 
+    // prevent default action when object is placed
     function dragEnter(e)
     {
         //console.log(this.id, 'dragenter')
@@ -128,8 +128,6 @@ document.addEventListener(domLoaded, () =>
     function dragLeave()
     {
         //console.log(this.id, 'dragleave')
-
-        this.style.backgroundColor = '';
     }
 
     // give selected square being dragged other color when object is dropped
@@ -150,7 +148,7 @@ document.addEventListener(domLoaded, () =>
 
         // define array that contains squares' IDs where the dragged object can be moved
         let validMoves = [
-            squareIdBeingDragged -1, 
+            squareIdBeingDragged -1,
             squareIdBeingDragged -width,
             squareIdBeingDragged +1,
             squareIdBeingDragged +width,
@@ -159,19 +157,19 @@ document.addEventListener(domLoaded, () =>
         let validMove = validMoves.includes(squareIdBeingReplaced);
 
         // check if square ID is included in validMoves
-        if(squareIdBeingReplaced && validMove) 
+        if(squareIdBeingReplaced && validMove)
         {
             squareIdBeingReplaced = null; // reset ID to null
         } else if (squareIdBeingReplaced && !validMove)
         {
             squares[squareIdBeingReplaced].style.backgroundColor = objectBeingReplaced; // restore color to original
-            squares[squareIdBeingDragged].style.backgroundColor = objectBeingDragged; // set initial square to original color 
-        } else 
+            squares[squareIdBeingDragged].style.backgroundColor = objectBeingDragged; // set initial square to original color
+        } else
         {
             squares[squareIdBeingDragged].style.backgroundColor = objectBeingDragged; // set color back to initial square
         }
     }
- 
+
 
 })
 
