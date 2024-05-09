@@ -54,6 +54,7 @@ document.addEventListener(domLoaded, () =>
     const grid = document.querySelector('.grid');
     const width = 8;
     const squares = []; // empty array to store new created divs added into a grid
+    let score = 0;
 
     // array with objects
     const runnerObjects =
@@ -82,6 +83,7 @@ document.addEventListener(domLoaded, () =>
     }
 
     createBoard();
+
 
     // 2. create function to drag objects
     // objects variables
@@ -171,11 +173,40 @@ document.addEventListener(domLoaded, () =>
     }
 
 
+    // 3. create function to check objects match
+    //  check row of three
+    function checkRowForThree()
+    {
+        for(i = 0; i < 61; i++) // last square to loop over is 61 as there are 64 squares in totals
+        {
+            let rowOfThree = [i, i + 1, i + 2]; // define row
+            let decidedColor = squares[i].style.backgroundColor; // grab color of first square and assign to decided color
+            let isBlank = squares[i].style.backgroundColor === ''; // if squares bg color is empty, this is true
+
+            
+            if(rowOfThree.every(index => squares[index].style.backgroundColor === decidedColor && !isBlank)) // if every index equals the decided color and is not blank
+                {
+                    score += 3; // score of 3 points
+                    rowOfThree.forEach(index => // if match found, take row of three array and give empty bg color for every index in it
+                        { 
+                            squares[index].style.backgroundColor = '';
+                        }) 
+                }
+        }
+    }
+
+    checkRowForThree();
+
+
+
+
+
+
+
+
 })
 
 
-// 3. create function to drop objects
-
-// 4. create function to check objects match
+// 4. create function to drop objects
 
 // 5. create function to clear game, start over
