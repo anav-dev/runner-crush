@@ -75,6 +75,9 @@ document.addEventListener(domLoaded, () =>
             const square = document.createElement('div'); // create new div
             square.setAttribute('draggable', true); // make square draggable
             square.setAttribute('id', i); // give id to each square
+
+            console.log(square);
+
             let randomObject = Math.floor(Math.random() * runnerObjects.length); // assign random full integer
             square.style.backgroundColor = runnerObjects[randomObject];// passing a number to array
             grid.appendChild(square); // put square into a div with class of grid
@@ -172,7 +175,20 @@ document.addEventListener(domLoaded, () =>
         }
     }
 
+    // 4. create function to drop objects after a match found
+    function moveDown()
+    {
+        for(i = 0; i < 55; i++) // check squares below each index for an empty square
+        {
+            if(squares[i + width].style.backgroundColor === '') // check if below square bg color is empty
+            {
+                squares[i + width].style.backgroundColor = squares[i].style.backgroundColor; // pass color to empty bg square
+                squares[i].style.backgroundColor = ''; // set inital square bg color to empty
+            }
+         }
+    }
 
+    
     // 3. create function to check objects match
     //  check row of three
     function checkRowForThree()
@@ -228,6 +244,7 @@ document.addEventListener(domLoaded, () =>
     // set up a repeating interval that will call functions constantly while playing so any code in below function will be invoked by the second parameter of 100 milliseconds
     window.setInterval(function()
     {
+        moveDown();
         checkRowForThree();
         checkColumnForThree();
     }, 100)
@@ -241,7 +258,5 @@ document.addEventListener(domLoaded, () =>
 
 })
 
-
-// 4. create function to drop objects
 
 // 5. create function to clear game, start over
