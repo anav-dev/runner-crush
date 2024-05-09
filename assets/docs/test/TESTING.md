@@ -67,7 +67,7 @@
     <summary>Click here to see Issue</summary>
     <br>
 
-    ![Game Board](https://github.com/anav-dev/runner-crush/blob/main/assets/docs/test/js-notvalidmove.jpg)
+    ![Split Up Squares](https://github.com/anav-dev/runner-crush/blob/main/assets/docs/test/js-bug-notvalidmove.jpg)
 
     </details>
 
@@ -77,7 +77,7 @@
     <summary>Click here to see Code</summary>
     <br>
 
-    ![Faulty Code](https://github.com/anav-dev/runner-crush/blob/main/assets/docs/test/js-notvalidmove-code.jpg)
+    ![Solution Code](https://github.com/anav-dev/runner-crush/blob/main/assets/docs/test/js-bug-notvalidmove-code.jpg)
 
     </details>
 
