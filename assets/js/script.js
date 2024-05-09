@@ -62,12 +62,12 @@ document.addEventListener(domLoaded, () =>
     // array with objects
     const runnerObjects =
     [
-        'green',
-        'white',
-        'pink',
-        'red',
-        'blue',
-        'purple',
+        'url(assets/images/donut.png)',
+        'url(assets/images/sun.png)',
+        'url(assets/images/sneakers.png)',
+        'url(assets/images/phone.png)',
+        'url(assets/images/watch.png)',
+        'url(assets/images/water.png)',
     ]
 
     // 1. create game board: a 8x8 grid of div elements with the class 'grid'
@@ -82,7 +82,7 @@ document.addEventListener(domLoaded, () =>
             console.log(square);
 
             let randomObject = Math.floor(Math.random() * runnerObjects.length); // assign random full integer
-            square.style.backgroundColor = runnerObjects[randomObject];// passing a number to array
+            square.style.backgroundImage = runnerObjects[randomObject];// passing a number to array
             grid.appendChild(square); // put square into a div with class of grid
             squares.push(square); // push square into array
         }
@@ -111,7 +111,7 @@ document.addEventListener(domLoaded, () =>
     {
         //console.log(this.id, 'dragstart')
 
-        objectBeingDragged = this.style.backgroundColor; // store color dragged into a variable
+        objectBeingDragged = this.style.backgroundImage; // store color dragged into a variable
         //console.log(objectBeingDragged);
         squareIdBeingDragged = parseInt(this.id); // assign square dragged id to this square id integer
     }
@@ -143,10 +143,10 @@ document.addEventListener(domLoaded, () =>
     {
         //console.log(this.id, 'drop')
 
-        objectBeingReplaced = this.style.backgroundColor; // store color
+        objectBeingReplaced = this.style.backgroundImage; // store color
         squareIdBeingReplaced = parseInt(this.id); // assign this square id integer to variable
-        this.style.backgroundColor = objectBeingDragged; // change square color into color being dragged
-        squares[squareIdBeingDragged].style.backgroundColor = objectBeingReplaced; // add square color into the array
+        this.style.backgroundImage = objectBeingDragged; // change square color into color being dragged
+        squares[squareIdBeingDragged].style.backgroundImage = objectBeingReplaced; // add square color into the array
     }
 
     // handle the ending of the drag
@@ -170,11 +170,11 @@ document.addEventListener(domLoaded, () =>
             squareIdBeingReplaced = null; // reset ID to null
         } else if (squareIdBeingReplaced && !validMove)
         {
-            squares[squareIdBeingReplaced].style.backgroundColor = objectBeingReplaced; // restore color to original
-            squares[squareIdBeingDragged].style.backgroundColor = objectBeingDragged; // set initial square to original color
+            squares[squareIdBeingReplaced].style.backgroundImage = objectBeingReplaced; // restore color to original
+            squares[squareIdBeingDragged].style.backgroundImage = objectBeingDragged; // set initial square to original color
         } else
         {
-            squares[squareIdBeingDragged].style.backgroundColor = objectBeingDragged; // set color back to initial square
+            squares[squareIdBeingDragged].style.backgroundImage = objectBeingDragged; // set color back to initial square
         }
     }
     
@@ -184,18 +184,18 @@ document.addEventListener(domLoaded, () =>
     {
         for(i = 0; i < 55; i++) // check squares below each index for an empty square
         {
-            if(squares[i + width].style.backgroundColor === '') // check if below square bg color is empty
+            if(squares[i + width].style.backgroundImage === '') // check if below square bg color is empty
             {
-                squares[i + width].style.backgroundColor = squares[i].style.backgroundColor; // pass color to empty bg square
-                squares[i].style.backgroundColor = ''; // set inital square bg color to empty
+                squares[i + width].style.backgroundImage = squares[i].style.backgroundImage; // pass color to empty bg square
+                squares[i].style.backgroundImage = ''; // set inital square bg color to empty
 
                 // if first row contains an empty square, needs to be filled with a colored one until first row is not empty
                 const firstRow = [0, 1, 2, 3, 4, 5, 6, 7];
                 const isFirstRow = firstRow.includes(i);
-                if(isFirstRow && squares[i].style.backgroundColor === '')
+                if(isFirstRow && squares[i].style.backgroundImage === '')
                     {
                         let randomColor = Math.floor(Math.random() * runnerObjects.length); // get random number from objects array
-                        squares[i].style.backgroundColor = runnerObjects[randomColor]; // pass random number through array and assign it to the square
+                        squares[i].style.backgroundImage = runnerObjects[randomColor]; // pass random number through array and assign it to the square
                     }
             }
          }
@@ -210,8 +210,8 @@ document.addEventListener(domLoaded, () =>
         for(i = 0; i < 61; i++) // last square to loop over is 61 as there are 64 squares in totals
         {
             let rowOfThree = [i, i + 1, i + 2]; // define row
-            let decidedColor = squares[i].style.backgroundColor; // grab color of first square and assign to decided color
-            const isBlank = squares[i].style.backgroundColor === ''; // if squares bg color is empty, this is true
+            let decidedColor = squares[i].style.backgroundImage; // grab color of first square and assign to decided color
+            const isBlank = squares[i].style.backgroundImage === ''; // if squares bg color is empty, this is true
 
             const notValid = [6, 7, 14, 15, 22, 23, 30, 31, 38, 39, 46, 47, 54, 55 ]; // define array of indexes not valid for checking a row match
             if(notValid.includes(i)) // check if index is a not valid index
@@ -220,14 +220,14 @@ document.addEventListener(domLoaded, () =>
                 }
 
             
-            if(rowOfThree.every(index => squares[index].style.backgroundColor === decidedColor && !isBlank)) // if every index equals the decided color and is not blank
+            if(rowOfThree.every(index => squares[index].style.backgroundImage === decidedColor && !isBlank)) // if every index equals the decided color and is not blank
                 {
                     score += 3; // score of 3 points
                     scoreDisplayed.innerHTML = score;
 
                     rowOfThree.forEach(index => // if match found, take row of three array and give empty bg color for every index in it
                         { 
-                            squares[index].style.backgroundColor = '';
+                            squares[index].style.backgroundImage = '';
                         }) 
                 }
         }
@@ -241,17 +241,17 @@ document.addEventListener(domLoaded, () =>
         for(i = 0; i < 47; i++) // last column square to loop over is 47
         {
             let columnOfThree = [i, i + width, i + width * 2]; // define column array
-            let decidedColor = squares[i].style.backgroundColor; // grab color of first square and assign to decided color
-            const isBlank = squares[i].style.backgroundColor === ''; // if squares bg color is empty, this is true
+            let decidedColor = squares[i].style.backgroundImage; // grab color of first square and assign to decided color
+            const isBlank = squares[i].style.backgroundImage === ''; // if squares bg color is empty, this is true
             
-            if(columnOfThree.every(index => squares[index].style.backgroundColor === decidedColor && !isBlank)) // if every index equals the decided color and is not blank
+            if(columnOfThree.every(index => squares[index].style.backgroundImage === decidedColor && !isBlank)) // if every index equals the decided color and is not blank
                 {
                     score += 3; // score of 3 points
                     scoreDisplayed.innerHTML = score;
 
                     columnOfThree.forEach(index => // if match found, take column of three array and give empty bg color for every index in it
                         { 
-                            squares[index].style.backgroundColor = '';
+                            squares[index].style.backgroundImage = '';
                         }) 
                 }
         }

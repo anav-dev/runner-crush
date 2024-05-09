@@ -254,12 +254,14 @@ footer {
 .grid div {
     height: 100px;
     width: 100px;
-    background-color: rgb(255, 255, 255, 0.1);
+    background-color: rgb(255, 255, 255, 0.2);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
     border-radius: 6px;
+    margin: 5px;
 }
+
 
 /*** Contact Page ***/
 .form {
