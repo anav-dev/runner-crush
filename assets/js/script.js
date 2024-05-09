@@ -181,7 +181,13 @@ document.addEventListener(domLoaded, () =>
         {
             let rowOfThree = [i, i + 1, i + 2]; // define row
             let decidedColor = squares[i].style.backgroundColor; // grab color of first square and assign to decided color
-            let isBlank = squares[i].style.backgroundColor === ''; // if squares bg color is empty, this is true
+            const isBlank = squares[i].style.backgroundColor === ''; // if squares bg color is empty, this is true
+
+            const notValid = [6, 7, 14, 15, 22, 23, 30, 31, 38, 39, 46, 47, 54, 55 ]; // define array of indexes not valid for checking a row match
+            if(notValid.includes(i)) // check if index is a not valid index
+                {
+                    continue // move to next iteration
+                }
 
             
             if(rowOfThree.every(index => squares[index].style.backgroundColor === decidedColor && !isBlank)) // if every index equals the decided color and is not blank
@@ -204,8 +210,7 @@ document.addEventListener(domLoaded, () =>
         {
             let columnOfThree = [i, i + width, i + width * 2]; // define column array
             let decidedColor = squares[i].style.backgroundColor; // grab color of first square and assign to decided color
-            let isBlank = squares[i].style.backgroundColor === ''; // if squares bg color is empty, this is true
-
+            const isBlank = squares[i].style.backgroundColor === ''; // if squares bg color is empty, this is true
             
             if(columnOfThree.every(index => squares[index].style.backgroundColor === decidedColor && !isBlank)) // if every index equals the decided color and is not blank
                 {
