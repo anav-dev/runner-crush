@@ -197,10 +197,34 @@ document.addEventListener(domLoaded, () =>
 
     checkRowForThree();
 
+    //  check column of three
+    function checkColumnForThree()
+    {
+        for(i = 0; i < 47; i++) // last column square to loop over is 47
+        {
+            let columnOfThree = [i, i + width, i + width * 2]; // define column array
+            let decidedColor = squares[i].style.backgroundColor; // grab color of first square and assign to decided color
+            let isBlank = squares[i].style.backgroundColor === ''; // if squares bg color is empty, this is true
+
+            
+            if(columnOfThree.every(index => squares[index].style.backgroundColor === decidedColor && !isBlank)) // if every index equals the decided color and is not blank
+                {
+                    score += 3; // score of 3 points
+                    columnOfThree.forEach(index => // if match found, take column of three array and give empty bg color for every index in it
+                        { 
+                            squares[index].style.backgroundColor = '';
+                        }) 
+                }
+        }
+    }
+
+    checkColumnForThree();
+
     // set up a repeating interval that will call functions constantly while playing so any code in below function will be invoked by the second parameter of 100 milliseconds
     window.setInterval(function()
     {
-        checkRowForThree()
+        checkRowForThree();
+        checkColumnForThree();
     }, 100)
 
 
