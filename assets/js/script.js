@@ -184,8 +184,18 @@ document.addEventListener(domLoaded, () =>
             {
                 squares[i + width].style.backgroundColor = squares[i].style.backgroundColor; // pass color to empty bg square
                 squares[i].style.backgroundColor = ''; // set inital square bg color to empty
+
+                // if first row contains an empty square, needs to be filled with a colored one until first row is not empty
+                const firstRow = [0, 1, 2, 3, 4, 5, 6, 7];
+                const isFirstRow = firstRow.includes(i);
+                if(isFirstRow && squares[i].style.backgroundColor === '')
+                    {
+                        let randomColor = Math.floor(Math.random() * runnerObjects.length); // get random number from objects array
+                        squares[i].style.backgroundColor = runnerObjects[randomColor]; // pass random number through array and assign it to the square
+                    }
             }
          }
+         
     }
 
     
