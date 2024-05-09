@@ -52,9 +52,12 @@ document.addEventListener(domLoaded, () =>
     //console.info("DOM fully loaded");
 
     const grid = document.querySelector('.grid');
+
+    const scoreDisplayed = document.getElementById('score');
+    let score = 0;
+
     const width = 8;
     const squares = []; // empty array to store new created divs added into a grid
-    let score = 0;
 
     // array with objects
     const runnerObjects =
@@ -174,6 +177,7 @@ document.addEventListener(domLoaded, () =>
             squares[squareIdBeingDragged].style.backgroundColor = objectBeingDragged; // set color back to initial square
         }
     }
+    
 
     // 4. create function to drop objects after a match found
     function moveDown()
@@ -219,6 +223,8 @@ document.addEventListener(domLoaded, () =>
             if(rowOfThree.every(index => squares[index].style.backgroundColor === decidedColor && !isBlank)) // if every index equals the decided color and is not blank
                 {
                     score += 3; // score of 3 points
+                    scoreDisplayed.innerHTML = score;
+
                     rowOfThree.forEach(index => // if match found, take row of three array and give empty bg color for every index in it
                         { 
                             squares[index].style.backgroundColor = '';
@@ -241,6 +247,8 @@ document.addEventListener(domLoaded, () =>
             if(columnOfThree.every(index => squares[index].style.backgroundColor === decidedColor && !isBlank)) // if every index equals the decided color and is not blank
                 {
                     score += 3; // score of 3 points
+                    scoreDisplayed.innerHTML = score;
+
                     columnOfThree.forEach(index => // if match found, take column of three array and give empty bg color for every index in it
                         { 
                             squares[index].style.backgroundColor = '';
@@ -258,8 +266,6 @@ document.addEventListener(domLoaded, () =>
         checkRowForThree();
         checkColumnForThree();
     }, 100)
-
-
 
 
 
