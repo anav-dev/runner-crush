@@ -197,6 +197,12 @@ document.addEventListener(domLoaded, () =>
 
     checkRowForThree();
 
+    // set up a repeating interval that will call functions constantly while playing so any code in below function will be invoked by the second parameter of 100 milliseconds
+    window.setInterval(function()
+    {
+        checkRowForThree()
+    }, 100)
+
 
 
 
