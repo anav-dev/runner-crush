@@ -81,4 +81,11 @@
 
     </details>
 
+- __JS Game Counter Unexpected Behavior__
+
+    After clicking the 'Let's Play' button, the score counter gets updated before the initial user move as there were already some random matches generated when building the game board using random objects.
+
+    This issue was fixed by resetting the score to 0 after that button is clicked, using an addEventListener method as follows: `openGameButton.addEventListener("click", () => { score = 0; scoreDisplayed.innerHTML = score;})`.
+
+
 ## Testing Tools

@@ -283,8 +283,12 @@ document.addEventListener(domLoaded, () =>
 
     /* End code inspiration source: Ania Kubow tutorial */
 
-
-
+    // once start button is clicked, score count starts from 0
+    openGameButton.addEventListener("click", () =>
+        {
+            score = 0;
+            scoreDisplayed.innerHTML = score;
+        })
 })
 
 
