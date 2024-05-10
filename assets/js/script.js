@@ -105,7 +105,7 @@ document.addEventListener(domLoaded, () =>
     createBoard();
 
 
-    // 2. create function to drag objects
+    // 2. function to drag objects
     // objects variables
     let objectBeingDragged;
     let objectBeingReplaced;
@@ -193,7 +193,7 @@ document.addEventListener(domLoaded, () =>
     }
     
 
-    // 4. create function to drop objects after a match found
+    // 4. function to drop objects after a match found
     function moveDown()
     {
         for(i = 0; i < 55; i++) // check squares below each index for an empty square
@@ -217,7 +217,7 @@ document.addEventListener(domLoaded, () =>
     }
 
     
-    // 3. create function to check objects match
+    // 3. function to check objects match
     //  check row of three
     function checkRowForThree()
     {
@@ -289,8 +289,34 @@ document.addEventListener(domLoaded, () =>
             score = 0;
             scoreDisplayed.innerHTML = score;
         })
+
+    // 5. function for timer countdown 
+    const timerDisplay = document.querySelector("#timer");
+    let timer = 20;
+
+    function countDown()
+    {
+        setInterval(function()
+        {
+            if(timer <= 0)
+                {
+                    // game ends
+                    console.log("time out");
+                    clearInterval((timer = 0));
+                }
+            timerDisplay.innerHTML = timer;
+            timer -= 1;
+        }, 1000);
+    }
+
+    openGameButton.addEventListener("click", countDown);
+
+    // 6. function to show up game over info 
+
+
+
+
 })
 
 
 
-// 5. create function to clear game, start over

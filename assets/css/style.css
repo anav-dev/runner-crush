@@ -71,6 +71,13 @@ ul {
     background: #F2DDA4;
 }
 
+.show {
+    display: block;
+}
+.hidden {
+    display: none;
+}
+
 main {
     display: flex;
     flex-direction: column;
@@ -216,10 +223,6 @@ nav .fa-envelope:hover {
     font-size: 20px;
 }
 
-.show {
-    display: block;
-}
-
 /* footer */
 footer {
     padding: 4em 0 0 0;
@@ -254,7 +257,7 @@ section #gameModal {
     align-items: center;
     color: #fff;
 }
-/* Code inspiration source: Ania Kubow tutorial */
+/* Code inspiration source for grid css: Ania Kubow tutorial */
 .grid {
     width: 880px;
     display: flex;
@@ -272,7 +275,6 @@ section #gameModal {
     border-radius: 6px;
     margin: 5px;
 }
-
 
 /*** Contact Page ***/
 .form {
