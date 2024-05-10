@@ -18,66 +18,90 @@
 <body>
     <header>
         <nav>
-            <a href="#" id="logo"><img src="assets/images/logo.png" alt="Runner Crush logo"></a>
+            <a href="index.html" id="logo"><img src="assets/images/logo.png" alt="Runner Crush logo"></a>
             <a href="contact.html"><i class="fa-regular fa-envelope"></i></a>
 
             <ul id="menu">
+                <li><a href="index.html">Home</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
     </header>
-    <!-- main section -->
+    <!-- main -->
     <main>
-        <div class="box-container">
-            <h1>Runner Crush</h1>
-
-            <div class="box bg-blue-light">
-                <a href="game.html" class="box-content hover-blue">
-                    <div class="box-img"><i class="fa-solid fa-play"></i></div>
-                    <div class="box-text"><h3 class="hover-blue">Let's Play</h3></div>
-                </a>
-            </div>
-
-            <div class="box bg-yellow" onclick="openDropdownInstructions()">
-                <div class="box-content hover-blue">
-                    <div class="box-img"><i class="fa-regular fa-file-lines"></i></div>
-                    <div class="box-text">
-                        <h3 class="hover-blue">Instructions<i class="fa-solid fa-angle-down"></i><i class="fa-solid fa-xmark"></i></h3>
+        <!-- landing section -->
+        <section>
+            <!-- intro modal -->
+            <div class="box-container" id="introModal">
+                <h1><span>R</span>unner <span>C</span>rush</h1>    
+                <div class="box bg-blue-light">
+                    <button class="box-content hover-blue" id="openGame">
+                        <div class="box-img"><i class="fa-solid fa-play"></i></div>
+                        <div class="box-text"><h3 class="hover-blue">Let's Play</h3></div>
+                    </button>
+                </div>
+    
+                <div class="box bg-yellow" onclick="openDropdownInstructions()">
+                    <div class="box-content hover-blue">
+                        <div class="box-img"><i class="fa-regular fa-file-lines"></i></div>
+                        <div class="box-text">
+                            <h3 class="hover-blue">Instructions<i class="fa-solid fa-angle-down"></i><i class="fa-solid fa-xmark"></i></h3>
+                        </div>
                     </div>
                 </div>
-            </div>
-
-            <div class="box dropdown-menu" id="dropdownInstructions">
-                <ul class="dropdown-content">
-                  <li><p><i class="fa-solid fa-angle-right"></i><span>begin:</span> Tap the Let's Play button.</p></li>
-                  <li><p><i class="fa-solid fa-angle-right"></i><span>search:</span> Look for runner objects that are the same.</p></li>
-                  <li><p><i class="fa-solid fa-angle-right"></i><span>match:</span> Pair up as many objects as you can.</p></li>
-                  <li><p><i class="fa-solid fa-angle-right"></i><span>time:</span> Keep an eye on the clock countdown.</p></li>
-                 </ul>
-            </div> 
-            
-            <div class="box bg-blue-dark" onclick="openDropdownFaq()">
-                <div class="box-content hover-blue-light">
-                    <div class="box-img"><i class="fa-regular fa-circle-question"></i></div>
-                    <div class="box-text">
-                        <h3 class="hover-blue-light">FAQ<i class="fa-solid fa-angle-down"></i><i class="fa-solid fa-xmark"></i></h3>
-                    </div> 
+    
+                <div class="box dropdown-menu" id="dropdownInstructions">
+                    <ul class="dropdown-content">
+                      <li><p><i class="fa-solid fa-angle-right"></i><span>begin:</span> Tap the Let's Play button.</p></li>
+                      <li><p><i class="fa-solid fa-angle-right"></i><span>search:</span> Look for runner objects that are the same.</p></li>
+                      <li><p><i class="fa-solid fa-angle-right"></i><span>match:</span> Pair up as many objects as you can.</p></li>
+                      <li><p><i class="fa-solid fa-angle-right"></i><span>time:</span> Keep an eye on the clock countdown.</p></li>
+                     </ul>
+                </div> 
+                
+                <div class="box bg-blue-dark" onclick="openDropdownFaq()">
+                    <div class="box-content hover-blue-light">
+                        <div class="box-img"><i class="fa-regular fa-circle-question"></i></div>
+                        <div class="box-text">
+                            <h3 class="hover-blue-light">FAQ<i class="fa-solid fa-angle-down"></i><i class="fa-solid fa-xmark"></i></h3>
+                        </div> 
+                    </div>
                 </div>
+    
+                <div class="box dropdown-menu" id="dropdownFaq">
+                    <ul class="dropdown-content">
+                      <li><p><i class="fa-solid fa-angle-right"></i><span>What's the number limit of times I can play?</span></p></li>
+                      <li><p><i class="fa-solid fa-minus"></i></i>You're welcome to play as many times as you'd like.</p></li>
+                      <li><p><i class="fa-solid fa-angle-right"></i><span>How do I match objects?</span></p></li>
+                      <li><p><i class="fa-solid fa-minus"></i></i>Finding 3 objets match and dragging them together.</p></li>
+                      <li><p><i class="fa-solid fa-angle-right"></i><span>I've found a bug</span></p></li>
+                      <li><p><i class="fa-solid fa-minus"></i>Feel free to reach out to me through the<span></span><a href="contact.html"> contact page.</a></p></li>
+                     </ul>
+                </div> 
             </div>
-
-            <div class="box dropdown-menu" id="dropdownFaq">
-                <ul class="dropdown-content">
-                  <li><p><i class="fa-solid fa-angle-right"></i><span>What's the number limit of times I can play?</span></p></li>
-                  <li><p><i class="fa-solid fa-minus"></i></i>You're welcome to play as many times as you'd like.</p></li>
-                  <li><p><i class="fa-solid fa-angle-right"></i><span>How do I match objects?</span></p></li>
-                  <li><p><i class="fa-solid fa-minus"></i></i>Finding matching pairs and dragging them together.</p></li>
-                  <li><p><i class="fa-solid fa-angle-right"></i><span>I've found a bug</span></p></li>
-                  <li><p><i class="fa-solid fa-minus"></i>Feel free to reach out to me through the<span></span><a href="contact.html"> contact page.</a></p></li>
-                 </ul>
-            </div> 
-        </div>
+        </section>
+        
+        <!-- game board section -->
+        <section>
+            <!-- game modal -->
+            <div class="game-container" id="gameModal">
+                <!-- score bar -->
+                <div class="score-bar bg-blue-dark">
+                    <div>
+                        <h3>Score</h3>
+                        <p id="score">0</p>
+                    </div>
+                    <div>
+                        <h3>Time</h3>
+                        <p>0s</p>
+                    </div>
+                </div>
+                <!-- game board -->
+                <div class="grid bg-blue-light"></div>
+            </div>
+        </section>
     </main>
-    <!-- footer section -->
+    <!-- footer -->
     <footer>
         <div id="copyright">
             <p>© 2024, anav-dev</p>
@@ -87,8 +111,8 @@
     <!-- fontawesome -->
     <script src="https://kit.fontawesome.com/2fdf17b0b9.js" crossorigin="anonymous"></script>
 
-     <!-- JS file -->
-     <script src="assets/js/script.js"></script>
+    <!-- JS file -->
+    <script src="assets/js/script.js"></script>
 
 </body>
 </html>

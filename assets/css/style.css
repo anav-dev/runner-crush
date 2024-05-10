@@ -22,10 +22,18 @@ body {
     background-color: #fff;
 }
 
+button {
+    all: unset;
+}
+
 h1 {
+    font-size: 60px;
     font-weight: normal;
     line-height: 1.3;
-    margin: 0 0 24px; 
+    margin: 0 0 40px; 
+}
+h1 span{
+    font-weight: bold;
 }
 
 h3 {
@@ -61,6 +69,19 @@ ul {
 }
 .bg-yellow-light {
     background: #F2DDA4;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+section {
+    width: 100%;
+    padding: 1rem;
+    text-align: center;
 }
 
 /* header */
@@ -104,25 +125,19 @@ nav .fa-envelope:hover {
     transition: 0.5s;
 }
 
-/*** Index Page ***/
+/*** Index Page ***/  
 /* boxes */
-main {
-    display: flex;
-    justify-content: center;
-    min-height: 83.5vh;
-}
 .box-container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-evenly;
-    max-width: 600px;
     width: 100%;
 }
 .box {
     display: flex;
     align-items: center;
     width: 100%;
+    max-width: 33%;
     height: 160px;    
     border-radius: 3px;
     padding: 1rem 2rem;
@@ -132,7 +147,6 @@ main {
 .box-content {
     display: flex;
     align-items: center;
-    justify-content: space-between;
     width: 100%;
     padding: 10px; 
     cursor: pointer;
@@ -174,6 +188,7 @@ main {
     padding: 0;  
     margin: 0px 0 20px 0;
     color: #06213E;
+    text-align: start;
 }
 .dropdown-content p {
     font-size: 22px;
@@ -219,12 +234,9 @@ footer {
 }
 
 /*** Game Page ***/
-.game-container {
-    display: flex;
-    flex-direction: column;
-    /* justify-content: center; */
-    align-items: center;
-    width: 100%;
+section #gameModal {
+    margin: 0 auto;
+    padding: 0;
 }
 .score-bar {
     height: 100px;
@@ -244,7 +256,6 @@ footer {
 }
 /* Code inspiration source: Ania Kubow tutorial */
 .grid {
-    /* height: 780px; */
     width: 880px;
     display: flex;
     flex-wrap: wrap;
@@ -270,7 +281,6 @@ footer {
     height: 60vh;
     padding: 0 30px;
     border-radius: 6px;
-    /* background: rgba(76, 162, 243, 0.1)  */
 }
 
 .form .field {
@@ -308,7 +318,7 @@ textarea {
     overflow: auto;
     outline: none;
     border-radius: 3px;
-    padding: 16px 20px;
+    padding: 16px 16px;
     margin: 8px 0;
     font-size: 1rem;
     font-family: inherit;  
@@ -321,6 +331,7 @@ textarea {
 
 .field button {
     margin: 10em 0 0 0;
+    padding: 0 0 0 20px;
     color: #fff;
     background-color: #4741A6;
     transition: all 0.3s ease;
@@ -368,10 +379,6 @@ textarea {
         font-size: 48px;
     }
 
-    .box-container {
-        margin: 3rem 1rem;
-    }
-
     h3 {
         font-size: 28px;
     }
@@ -399,16 +406,15 @@ textarea {
     }
     .score-bar div {
         font-size: 20px;
-    }
-
-    .grid {
-        width: 95%;
-    }
+    }   
 } 
 
 /* small screen*/
 @media screen and (max-width: 767px) {
     /* index page */
+    .box {
+        max-width: 80%;
+    }
     .box-content {
         padding: 0;
     }
@@ -417,25 +423,14 @@ textarea {
     }
 
     .dropdown-menu {
-        min-height: 320px;     
-    }
-
-    /* game page */
-    .grid div {   
-        width: 60px;
-        height: 60px;
+        min-height: 240px;     
     }
 }
 
 /* tablet screens */
 @media screen and (min-width: 768px) and (max-width: 1023px) {
-    /* game page */
-    .grid {   
-        width: 80%;
+    .box {
+        max-width: 60%;
     }
-}
-
-@media screen and (min-width: 1024px) and (max-width: 1480px) {
-    
 }
 

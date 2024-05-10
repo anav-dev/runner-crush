@@ -1,6 +1,6 @@
 /*** Index Page ***/
 
-// 1. open dropdown box
+// dropdown box functionality
 function openDropdownInstructions()
 {
     //console.log('clicked')
@@ -40,6 +40,20 @@ function openDropdownFaq()
     }
 }
 
+
+// modal functionality | MDN Documentation followed for below code
+const introModal = document.getElementById("introModal");
+const gameModal = document.getElementById("gameModal");
+const openGameButton = document.getElementById("openGame");
+
+gameModal.style.display = "none"; // set default game modal style, hidden
+
+// once 'let's play' button is clicked, hide intro modal and open game modal
+openGameButton.addEventListener("click", () =>
+{
+    introModal.style.display = "none";
+    gameModal.style.display = "inline-block";
+})
 
 
 /*** Game Page ***/
@@ -267,12 +281,12 @@ document.addEventListener(domLoaded, () =>
         checkColumnForThree();
     }, 100)
 
-
-
+    /* End code inspiration source: Ania Kubow tutorial */
 
 
 
 })
+
 
 
 // 5. create function to clear game, start over
