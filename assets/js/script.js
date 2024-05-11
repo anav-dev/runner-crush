@@ -322,8 +322,19 @@ document.addEventListener(domLoaded, () =>
     }
     
     // 7. function to start the game again
+    const playAgainButton = document.getElementById("play-again-button");
 
+    function playAgain() 
+    {
+        const gameOverModal = document.getElementById("gameOverModal");
+        gameOverModal.classList.toggle("hidden");
 
+        score = 0;
+        scoreDisplayed.innerHTML = score;
+        timer = 20;
+    }
+
+    playAgainButton.addEventListener("click", playAgain);
 
 
 })
