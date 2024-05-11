@@ -68,6 +68,7 @@ document.addEventListener(domLoaded, () =>
     const grid = document.querySelector('.grid');
 
     const scoreDisplayed = document.getElementById('score');
+    let gameoverScoreDisplayed = document.getElementById('gameover-score');
     let score = 0;
 
     const width = 8;
@@ -317,6 +318,7 @@ document.addEventListener(domLoaded, () =>
     {
         const gameOverModal = document.getElementById("gameOverModal");
         gameOverModal.classList.remove("hidden");
+        gameoverScoreDisplayed.innerHTML = score;
     }
     
     // 7. function to start the game again
