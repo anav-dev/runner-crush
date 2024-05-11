@@ -83,7 +83,7 @@
         
         <!-- game board section -->
         <section>
-            <!-- game modal -->
+                <!-- game modal -->
             <div class="game-container" id="gameModal">
                 <!-- score bar -->
                 <div class="score-bar bg-blue-dark">
@@ -98,8 +98,25 @@
                 </div>
                 <!-- game board -->
                 <div class="grid bg-blue-light"></div>
-            </div>
-        </section>      
+            </div>            
+        </section> 
+        <!-- game over section -->
+        <section>
+                <!-- game over modal -->
+                <div class="game-over-container hidden" id="gameOverModal">
+                    <div class="game-over-content">
+                        <div class="game-over-text">
+                            <h3>Game Over</h3>
+                            <p>Score:<span></span> points</p>
+                            <div class="game-over-buttons">
+                                <button><i class="fa-solid fa-repeat"></i></i></i></button>
+                                <button onclick="window.location.href='index.html'"><i class="fa-solid fa-stop"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+        </section>
     </main>
     <!-- footer -->
     <footer>

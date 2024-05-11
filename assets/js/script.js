@@ -303,6 +303,7 @@ document.addEventListener(domLoaded, () =>
                     // game ends
                     console.log("time out");
                     clearInterval((timer = 0));
+                    showGameOverInfo();
                 }
             timerDisplay.innerHTML = timer;
             timer -= 1;
@@ -311,7 +312,14 @@ document.addEventListener(domLoaded, () =>
 
     openGameButton.addEventListener("click", countDown);
 
-    // 6. function to show up game over info 
+    // 6. function to show up game over info
+    function showGameOverInfo() 
+    {
+        const gameOverModal = document.getElementById("gameOverModal");
+        gameOverModal.classList.remove("hidden");
+    }
+    
+    // 7. function to start the game again
 
 
 

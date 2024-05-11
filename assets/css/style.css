@@ -225,7 +225,7 @@ nav .fa-envelope:hover {
 
 /* footer */
 footer {
-    padding: 4em 0 0 0;
+    padding: 1em 0 0 0;
     text-align: center;
 }
 
@@ -274,6 +274,47 @@ section #gameModal {
     background-position: center center;
     border-radius: 6px;
     margin: 5px;
+}
+
+/* game over modal */
+.game-over-container {
+    background-color: #9BBBFC;
+    position: absolute;
+    top: 0;
+    left: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0.95;
+    height: 140vh;
+}
+.game-over-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 95vh;
+}
+.game-over-text {
+    display: flex;
+    flex-direction: column;
+    color: #06213E;
+    background-color:#fff;
+    width: 30%;
+    border: 1px solid #ddd;
+    border-radius: 15px;
+    padding: 1.3rem;   
+}
+.game-over-text h3 {
+    margin: 0 0 2rem 0;
+}
+.game-over-buttons {
+    padding: 2rem; 
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    cursor: pointer;
 }
 
 /*** Contact Page ***/
