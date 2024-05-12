@@ -40,8 +40,10 @@ h3 {
     cursor: pointer;
 }
 
-html {
-    overflow: auto;
+html,
+body {
+    width:100%;
+    overflow-x:hidden;
 }
 
 img {
@@ -83,10 +85,8 @@ ul {
 }
 
 main {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    position: relative;
+    min-height: 90vh;
 }
 
 section {
@@ -241,7 +241,7 @@ footer {
 }
 
 /*** Game Page ***/
-section #gameModal {
+#section-game {
     margin: 0 auto;
     padding: 0;
 }
@@ -282,24 +282,23 @@ section #gameModal {
 }
 
 /* game over modal */
-.game-over-container {
-    background-color: #9BBBFC;
+.game-over-modal {
     position: absolute;
+    background-color: #9BBBFC;
     top: 0;
     left: 0;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    opacity: 0.95;
-    height: 140vh;
+    opacity: 0.95; 
 }
 .game-over-content {
+    width: 100%;
+    height: 100%;
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 95vh;
 }
 .game-over-text {
     display: flex;
@@ -309,7 +308,7 @@ section #gameModal {
     width: 30%;
     border: 1px solid #ddd;
     border-radius: 15px;
-    padding: 1.3rem;   
+    padding: 2rem;   
 }
 .game-over-text h3 {
     margin: 0 0 2rem 0;
@@ -462,9 +461,6 @@ textarea {
         font-size: 20px;
     }  
 
-    .game-over-content {
-        height: 80vh;
-    }
     .game-over-text {
         width: 80%;
         font-size: 2rem; 
@@ -472,13 +468,18 @@ textarea {
 } 
 /* extra small screen*/
 @media screen and (max-width: 659px) {
+    #section-game {
+        width: auto;
+        padding: 0;
+    }
+
     /*index page*/
     .box {
         max-width: 100%;
     }
     /* game page */
     .score-bar {
-        width: 420px;
+        width: 360px;
         height: 60px;
     }
     .score-bar div,
@@ -486,13 +487,17 @@ textarea {
         font-size: 18px;
     } 
     .grid {
-        height: 420px;
-        width: 420px;
+        height: 360px;
+        width: 360px;
         padding: 0;
     } 
     .grid div {
-        height: 40px;
-        width: 40px;
+        height: 35px;
+        width: 35px;
+    }
+
+    .game-over-text {
+        font-size: 1.25rem; 
     }
 }
 /* small screen*/
