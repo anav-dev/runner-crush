@@ -4,39 +4,43 @@
 function openDropdownInstructions()
 {
     //console.log('clicked')
-    const dropdownInstructions = document.getElementById('dropdownInstructions').classList.toggle('show');
+    const dropdownInstructions = document.getElementById('dropdownInstructions');
 
     // if dropdown is displayed, hide arrow icon and show x mark
     const arrow = document.getElementsByClassName('fa-angle-down')[0]
     const xmark = document.getElementsByClassName('fa-xmark')[0]
 
-    if(dropdownInstructions)
+    if(dropdownInstructions.style.display === "block")
     {
-        arrow.style.display = 'none'
-        xmark.style.display = 'inline-block'
+        dropdownInstructions.style.display = "none";
+        arrow.style.display = 'inline-block';
+        xmark.style.display = 'none';
     } else
     {
-        xmark.style.display = 'none'
-        arrow.style.display = 'inline-block'
+        dropdownInstructions.style.display = "block";
+        arrow.style.display = 'none';
+        xmark.style.display = 'inline-block';
     }
 }
 
 function openDropdownFaq()
 {
-    const dropdownFaq = document.getElementById('dropdownFaq').classList.toggle('show')
+    const dropdownFaq = document.getElementById('dropdownFaq');
 
     // if dropdown is displayed, hide arrow icon and show x mark
     const arrow = document.getElementsByClassName('fa-angle-down')[1]
     const xmark = document.getElementsByClassName('fa-xmark')[1]
 
-    if(dropdownFaq)
+    if(dropdownFaq.style.display === "block")
     {
-        arrow.style.display = 'none'
-        xmark.style.display = 'inline-block'
+        dropdownFaq.style.display = "none";
+        arrow.style.display = 'inline-block'
+        xmark.style.display = 'none'
     } else
     {
-        xmark.style.display = 'none'
-        arrow.style.display = 'inline-block'
+        dropdownFaq.style.display = "block";
+        arrow.style.display = 'none';
+        xmark.style.display = 'inline-block';
     }
 }
 
