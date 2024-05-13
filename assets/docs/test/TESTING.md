@@ -14,18 +14,53 @@
     <summary>Click here to see Validation Results</summary>
     <br>
 
-    ![HTML Validation]()
+    ![HTML Validation](https://github.com/anav-dev/runner-crush/blob/main/assets/docs/test/W3C-HTML-Validator.jpg)
 
-    ![CSS Validation]()
+    ![CSS Validation](https://github.com/anav-dev/runner-crush/blob/main/assets/docs/test/W3C-CSS-Validator.jpg)
 
     </details>
 
 
 - __Manual Testing__
 
+    In order to ensure the proper functionality of this game, the following aspects have been tested manually: 
+
+    1. Buttons: work and have the same format.
+    2. Game: functions properly, matches can be made and squares are re-filled after a match is found.
+    3. Game Features: images are properly displayed, score shows accurate user score, time countdown functions properly, game over modal appears when time is up and shows proper content.
+    4. Icons: are properly styled and react to the selected dropdown box when clicked.
+    5. Links: redirect to the corresponding site/section.
+    6. Paths: set properly, no broken paths.
+    7. Typos: absence of any typing error.
+    8. Contact Form & Success Alert & EmailJS Message: work and are correctly displayed.
+   
+    
+    The bellow table shows manual tests performanced:
+
+    | Action | Expected Behaviour | Result |
+    | :---         |     :---:      |          ---: |
+    | 1. Click navbar links   | Redirect to corresponding section     | Pass    |
+    | 2. Click logo image   | Redirects to Home page     | Pass    |
+    | 3. Click arrow displayed when scrolled  | Redirect to document's top    | Pass    |
+    | 4. Click 2nd and 3rd box on landing page  | Corresponding dropdown content appear, icons changed when box clicked    | Pass    |
+    | 5. Click 'Let's Play' box   | Game modal is displayed, score set to 0 and time to 20    | Pass    |
+    | 6. Check game's images   | Images are properly displayed    | Pass    | 
+    | 7. Check object's valid moves   | Selected object can only be moved horizontally or vertically    | Pass    |   
+    | 8. Make a game match  | Matched objects disappear, new random objects drop, and score is updated     | Pass    |
+    | 9. Play till time up  | Game over modal is displayed     | Pass    |
+    | 10. Click game over each modal icons  | Redirect to corresponding section, either Home page or reset game     | Pass    |
+    | 11. Submit form with valid fields  | Success Alert is displayed, email from EmailJS SDK is received     | Pass    |
+    | 12. Submit form with invalid fields  | Required field message pops up     | Pass    |
+    | 13. Click content typos  | No typing mistakes     | Pass    |
+
 
 - __Peer-code-review Testing | Slack Community__
 
+    After a peer-code-review request, the following issues were spotted by code peers feedback:
+
+    1. 
+    2. 
+    3. 
     
 
 ## Responsiveness Testing
@@ -124,3 +159,9 @@
 
 
 ## Testing Tools
+
+- [W3C HTML](https://validator.w3.org/)
+- [W3C CSS](https://jigsaw.w3.org/css-validator/)
+- [Ui.dev](https://ui.dev/amiresponsive)
+- [Lighthouse](https://developer.chrome.com/docs/lighthouse#:~:text=Lighthouse%20has%20audits%20for%20performance,or%20as%20a%20Node%20module.)
+- [Wave.org](https://wave.webaim.org/)
