@@ -10,18 +10,25 @@ form.addEventListener('submit', function(event)
 {
     event.preventDefault();
 
+    let userName = document.getElementById('user_name');
+
     emailjs.sendForm(serviceID, templateID, this).then(
         (response) => 
         {
-            //console.log('SUCCESS!', response.status, response.text);
+            console.log('SUCCESS!', response.status, response.text);
 
-            let userName = document.getElementById('user_name');
-
+            // display alert so user knows message is sent
             alert(`${userName.value} your message has been sent, thanks!`)
+
+            // clearing form fields after submission
+            form.reset();
         },
         (error) => 
         {
             console.log('FAILED...', error);
+
+            // display error msg so user knows message is not sent
+            alert(`${userName.value} sorry, something went wrong, try again!`)
         },
       );
 })
