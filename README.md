@@ -6,7 +6,7 @@ This is a game where the player aims to match as many running objects as possibl
 
 ---
 
-![Site Mockup]()
+![Site Mockup](https://github.com/anav-dev/runner-crush/blob/main/assets/docs/mockup/site-mockup.jpg)
 
 ## User Experience
 - __Objectives__
@@ -71,18 +71,135 @@ This is a game where the player aims to match as many running objects as possibl
   
 ## Site Features
 - __Navigation Bar__
+  
+  A clear and defined navigation system that provides links (to the Contact page and back to the Home page) within the document to allow users to navigate smoothly. 
+
+  It has a responsive design, therefore it responds to user needs by adapting to different screen sizes.
+
+    <details>
+    <summary>Click here to see Navbar below</summary>
+    <br>
+
+    ![Navbar](https://github.com/anav-dev/runner-crush/blob/main/assets/docs/features/nav-bar.jpg)
+
+    </details>
+
+    <details>
+    <summary>Click here to see responsive Navbar</summary>
+    <br>
+      
+    ![Navbar on Small Screens](https://github.com/anav-dev/runner-crush/blob/main/assets/docs/features/nav-bar-responsive.jpg)
+
+    </details>
+
 
 - __Landing Page__
 
-- __Game__
+  On the landing page, the navbar, the page title and three centered boxes are displayed. The first one prompts the user to start playing the game, the second contains the game instructions on a dropdown box, and the last one provides a FAQs dropdown box so user experience is improved allowing users to answer the most commonly asked questions surrounding the game.
 
-- __Contact Form__
+    <details>
+    <summary>Click here to see Landing page</summary>
+    <br>
+
+    ![Landing Page](https://github.com/anav-dev/runner-crush/blob/main/assets/docs/features/landing-page.jpg)
+
+    </details>
+
+    <details>
+    <summary>Click here to see opened Dropdown boxes</summary>
+    <br>
+
+    ![Dropdown Boxes](https://github.com/anav-dev/runner-crush/blob/main/assets/docs/features/landing-page-dropdown.jpg)
+
+    </details>
+
+- __Game Modals__
+
+  Two modals build the Javascript game: the game modal and the game over modal.
+  
+  The first one is displayed after the 'Let's Play' button on the landing page is clicked. The game board is an 8 x 8 squares board that contains the runner objects placed in random order and a navigation bar with the user score and game timer (20 seconds). The user will then match them and group them to score points.
+
+    <details>
+    <summary>Click here to see Game modal</summary>
+    <br>
+
+    ![Game Modal](https://github.com/anav-dev/runner-crush/blob/main/assets/docs/features/game-modal.jpg)
+
+    </details>
+  
+  Once the time is up, the game over modal will be displayed, showing the end game user score as well as two buttons, one for restarting the game and the other for stopping playing that redirect users to the landing page.
+
+    <details>
+    <summary>Click here to see Game Over modal</summary>
+    <br>
+
+    ![Game Over Modal](https://github.com/anav-dev/runner-crush/blob/main/assets/docs/features/gameover-modal.jpg)
+
+    </details>
+
+- __Contact Page__
+  
+  This page allows users to contact the site owner through a contact form. The user will be asked to submit their name, surname, email address, and message.
+
+    <details>
+    <summary>Click here to see Contact form</summary>
+    <br>
+
+    ![Contact Form](https://github.com/anav-dev/runner-crush/blob/main/assets/docs/features/contact-form.jpg)
+
+    </details>
+
+  After submitting the form, an alert message will appear on the top of the document, and the form field data will be reset. The site owner will then receive a message thanks to the implemented [EmailJS SDK](https://www.emailjs.com/).
+
+    <details>
+    <summary>Click here to see Alert Message</summary>
+    <br>
+
+    ![Success Alert](https://github.com/anav-dev/runner-crush/blob/main/assets/docs/features/contact-form-alert-success.jpg)
+
+    </details>
+
+    <details>
+    <summary>Click here to see Test Email</summary>
+    <br>
+
+    ![Success New EmailJS Message](https://github.com/anav-dev/runner-crush/blob/main/assets/docs/features/contact-form-emailjs-success-new-message.jpg)
+
+    </details>
 
 - __Footer__
+  The footer section displays the copyright details of the site owner and has a minimal style.
 
-- __Accessibility__
+    <details>
+    <summary>Click here to see Footer</summary>
+    <br>
+
+    ![Footer](https://github.com/anav-dev/runner-crush/blob/main/assets/docs/features/footer.jpg)
+
+    </details>
+
+- __Scroll to Top Arrow__
+
+  This arrow appears on the page's bottom right side when scrolling down and, if clicked, brings users back to the top of the website, so navigation is smoother and more effective for users.
+
+    <details>
+    <summary>Click here to see Arrow</summary>
+    <br>
+
+    ![Scroll to Top Arrow](https://github.com/anav-dev/runner-crush/blob/main/assets/docs/features/totop-arrow.jpg)
+
+    </details>
+
+
 
 - __Future Features__
+
+  Ranking Players Score: Creating another JavaScript modal that contains the best ranking players' scores so users' engagement activity can be increased.
+
+  Video Tutorial: Adding a video of how to play the game to show a visual game example to users and clarify the instructions. It might be placed inside the landing page Instructions dropdown box if styling correctly.
+
+  Error Page: Making a special page for errors, like when a page isn't found (404 error), to help users find their way around more easily.
+
 
 ## Testing
 
