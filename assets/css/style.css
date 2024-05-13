@@ -136,6 +136,27 @@ nav .fa-envelope:hover {
     transition: 0.5s;
 }
 
+/* scroll to top button */
+#back-to-top {
+    position: fixed;
+    bottom: 2rem;
+    right: 0;
+    z-index: 99;
+    border: none;
+    border-radius: 3px;
+    outline: none;
+    background-color: #06213E;
+    color: white;
+    cursor: pointer;
+    padding: 1rem 15px;
+    font-size: 1.5rem;
+}
+
+#back-to-top:hover {
+    background-color: #9BBBFC;
+    transition: 0.5s;
+}
+
 /*** Index Page ***/  
 /* boxes */
 .box-container {
