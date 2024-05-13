@@ -383,6 +383,7 @@ textarea {
     background-color: #4741A6;
     transition: all 0.3s ease;
     cursor: pointer;
+    width: 97%;
 }
 .field button:hover {
     color:#06213E;
