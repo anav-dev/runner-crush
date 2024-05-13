@@ -202,6 +202,11 @@ nav .fa-envelope:hover {
     display: none;
 }
 
+
+.hover-blue {
+    font-size: 1.17em;
+    font-weight: bold;
+}
 .hover-blue:hover {
     color: #4741A6;
     transition: 0.5s;
@@ -449,7 +454,8 @@ textarea {
         font-size: 48px;
     }
 
-    h3 {
+    h3,
+    .hover-blue  {
         font-size: 28px;
     }
 
