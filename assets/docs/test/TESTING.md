@@ -87,5 +87,20 @@
 
     This issue was fixed by resetting the score to 0 after that button is clicked, using an addEventListener method as follows: `openGameButton.addEventListener("click", () => { score = 0; scoreDisplayed.innerHTML = score;})`.
 
+- __JS Open Dropdown Boxes Function Stop Working__
+
+    After implementing the game's JavaScript functionality, the dropdown boxes displayed on the landing page stop working properly, failing to open when clicked.
+
+    Although the reason causing this issue was not found, this problem was fixed by modifying the function in charge of that functionality, indicating the displayed style of the selected box, as follows:
+
+    <details>
+    <summary>Click here to see Improved Function</summary>
+    <br>
+
+    ![Solution Code](https://github.com/anav-dev/runner-crush/blob/main/assets/docs/test/js-bug-dropdown-code.jpg)
+
+    </details>
+
+
 
 ## Testing Tools
