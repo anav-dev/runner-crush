@@ -1,12 +1,32 @@
 # Runner Crush Testing
 
-![Site Mockup]()
+![Site Mockup](https://github.com/anav-dev/runner-crush/blob/main/assets/docs/mockup/site-mockup.jpg)
 
 
 ---
 
 ## Site Functionality Testing
+- __Automated Testing: HTML & CSS Validation__
 
+    HTML and CSS code have been tested and validated by using: [W3C HTML](https://validator.w3.org/) and [W3C CSS](https://jigsaw.w3.org/css-validator/). 
+
+    <details>
+    <summary>Click here to see Validation Results</summary>
+    <br>
+
+    ![HTML Validation]()
+
+    ![CSS Validation]()
+
+    </details>
+
+
+- __Manual Testing__
+
+
+- __Peer-code-review Testing | Slack Community__
+
+    
 
 ## Responsiveness Testing
 
