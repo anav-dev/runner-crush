@@ -97,7 +97,7 @@
     <summary>Click here to see Improved Function</summary>
     <br>
 
-    ![Solution Code](https://github.com/anav-dev/runner-crush/blob/main/assets/docs/test/js-bug-dropdown-code.jpg)
+    ![Solution Code](https://github.com/anav-dev/runner-crush/blob/main/assets/docs/test/js-bug-dropdow-code.jpg)
 
     </details>
 
