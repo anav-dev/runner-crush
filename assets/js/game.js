@@ -98,7 +98,7 @@ document.addEventListener(domLoaded, () =>
             square.setAttribute('draggable', true); // make square draggable
             square.setAttribute('id', i); // give id to each square
 
-            console.log(square);
+            //console.log(square);
 
             let randomObject = Math.floor(Math.random() * runnerObjects.length); // assign random full integer
             square.style.backgroundImage = runnerObjects[randomObject];// passing a number to array
@@ -205,22 +205,23 @@ document.addEventListener(domLoaded, () =>
 
         for(i = 0; i < 55; i++) // check squares below each index for an empty square
         {
-            if(squares[i + width].style.backgroundImage === '') // check if below square bg color is empty
+            // if first row contains an empty square, needs to be filled with a colored one until first row is not empty
+            const firstRow = [0, 1, 2, 3, 4, 5, 6, 7];
+            const isFirstRow = firstRow.includes(i);
+            
+            if(isFirstRow && squares[i].style.backgroundImage === '')
+                {
+                    let randomColor = Math.floor(Math.random() * runnerObjects.length); // get random number from objects array
+                    squares[i].style.backgroundImage = runnerObjects[randomColor]; // pass random number through array and assign it to the square
+                }
+
+            // then check if below square bg color is empty
+            if(squares[i + width].style.backgroundImage === '') 
             {
                 squares[i + width].style.backgroundImage = squares[i].style.backgroundImage; // pass color to empty bg square
-                squares[i].style.backgroundImage = ''; // set inital square bg color to empty
-
-                // if first row contains an empty square, needs to be filled with a colored one until first row is not empty
-                const firstRow = [0, 1, 2, 3, 4, 5, 6, 7];
-                const isFirstRow = firstRow.includes(i);
-                if(isFirstRow && squares[i].style.backgroundImage === '')
-                    {
-                        let randomColor = Math.floor(Math.random() * runnerObjects.length); // get random number from objects array
-                        squares[i].style.backgroundImage = runnerObjects[randomColor]; // pass random number through array and assign it to the square
-                    }
+                squares[i].style.backgroundImage = ''; // set inital square bg color to empty                
             }
-         }
-         
+        }     
     }
 
     

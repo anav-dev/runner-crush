@@ -242,6 +242,40 @@ Testing has taken into account a range of viewport sizes, including desktop, pho
 
     Issue 1: On the Landing page, the bottom dropdown content issue was fixed by incrementing the minimum height of the dropdown content box on the required media query for small screens, as follows: `.dropdown-menu { min-height: 310px; }`.
 
+- __JS Empty Objects on first row__
+
+    Sometimes when creating the game board, or after a row match is found on the first row, the new objects dropped appear empty as their HTML attribute `style` is empty, missing the CSS property `background-image` used to set a random image as the square background.
+
+    <details>
+    <summary>Click here to see Issue</summary>
+    <br>
+
+    ![Match Issue](https://github.com/anav-dev/runner-crush/blob/main/assets/docs/test/js-drop-objects.jpg)
+
+    </details>
+
+    This issue was sorted out by editing the function in charge of moving down objects if an empty square background was found. 
+    
+    The initial `moveDown()` function would first loop over checking if the square below has no background image and then would set a random background image. After that, it would check if the current square belongs to the first row, filling any empty spaces in the first row if needed.
+
+    <details>
+    <summary>Click here to see Initial Code</summary>
+    <br>
+
+    ![Match Issue](https://github.com/anav-dev/runner-crush/blob/main/assets/docs/test/js-drop-objects-initial-code.jpg)
+
+    </details>
+
+    By editing the order of the operations, the updated `moveDown()` now first ensures that the first row remains fille before moving the content of the squares down, sorting out the issue. 
+
+    <details>
+    <summary>Click here to see Fixed Code</summary>
+    <br>
+
+    ![Match Issue](https://github.com/anav-dev/runner-crush/blob/main/assets/docs/test/js-drop-objects-fixed-code.jpg)
+
+    </details>
+
 
 ## Unfixed Bugs
 
@@ -271,18 +305,6 @@ Attemps to rectify the below bugs were made. However, they were unsuccessful, an
     [StackOverFLow](https://stackoverflow.com/questions/21350874/html5-drag-drop-for-mobile)
 
     This article also helped to find the bug cause: [Forums.meteor.com](https://forums.meteor.com/t/solved-html5-drag-drop-touch/46178)
-
-- __JS Empty Objects on first row__
-
-    Sometimes when creating the game board, or after a row match is found on the first row, the new objects dropped appear empty as their HTML attribute `style` is empty, missing the CSS property `background-image` used to set a random image as the square background.
-
-    <details>
-    <summary>Click here to see Issue</summary>
-    <br>
-
-    ![Match Issue](https://github.com/anav-dev/runner-crush/blob/main/assets/docs/test/js-drop-objects.jpg)
-
-    </details>
 
 - __CSS Minor Issue__
 
