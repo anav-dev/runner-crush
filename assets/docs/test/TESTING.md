@@ -200,9 +200,19 @@ The following tools have been used to ensure this site meets the required access
 
 - __Accessibility Errors__
 
-    Contrast Errors: The contrast between the 'FAQs' section text and the background colours was very low. To improve accessibility the initial chosen background colour `#4741A6` was replaced with a lighter blue tone `#9BBBFC` so that users with visual impairments can now read them easily.
+    1 Contrast Error: The contrast between the 'FAQs' section text and the background colours was very low. To improve accessibility the initial chosen background colour `#4741A6` was replaced with a lighter blue tone `#9BBBFC` so that users with visual impairments can now read them easily.
 
-    Empty Link and Buttons: The navbar contact icon link and the game over modal buttons had no text, so the alt attribute with a describing text that presents the functionality of the link and the buttons were added to avoid confusion for screen reader users.
+    1 Empty Link: The navbar contact icon link had no text so an `aria-label="An envelope icon"` attribute was also added so when a screen reader encounters the link, the aria-label text is read so that the user will know what it is.
+
+    2 Empty Buttons: Adding a `type="button"` attribute to the game over modal buttons was used to tell assistive technology that those element are a button used to perform an action.
+
+    <details>
+    <summary>Click here to see improved Lighthouse check</summary>
+    <br>
+
+    ![Lighthouse Testing improvement](https://github.com/anav-dev/runner-crush/blob/main/assets/docs/test/lighthouse-testing.jpg)
+
+    </details>
 
 
 ## Testing Tools
