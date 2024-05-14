@@ -228,7 +228,7 @@ nav .fa-envelope:hover {
     text-align: start;
 }
 .dropdown-content p {
-    font-size: 22px;
+    font-size: 1rem;
     margin: 0 0 5px 0;
     padding: 0 0 0 2rem;
     width: 100%; 
@@ -250,7 +250,7 @@ nav .fa-envelope:hover {
 .dropdown-content span {
     text-transform: uppercase;
     font-weight: 800;
-    font-size: 20px;
+    font-size: 1.125rem;
 }
 
 /* footer */
@@ -545,7 +545,7 @@ textarea {
     }
 
     .dropdown-menu {
-        min-height: 240px;     
+        min-height: 260px;     
     }
 
     /* game page */
@@ -588,6 +588,12 @@ textarea {
         height: 80px;
         width: 80px;
         margin: 2px;
+    }
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1480px) {
+    .box {
+        max-width: 50%;
     }
 }
 

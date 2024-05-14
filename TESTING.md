@@ -97,7 +97,7 @@
 
     <br>
 
-    > Further information about the above bugs on: [Bugs Section](https://github.com/anav-dev/runner-crush/blob/main/assets/docs/test/TESTING.md#bugs).
+    > Further information about the above bugs on: [Bugs Section](https://github.com/anav-dev/runner-crush/blob/main/TESTING.md#bugs).
     
 
 ## Responsiveness Test
@@ -126,7 +126,7 @@ The following tools have been used to ensure this site meets the required access
 
 </details>
 
-> Further information about the Accessibility bugs on: [Bugs Section](https://github.com/anav-dev/runner-crush/blob/main/assets/docs/test/TESTING.md#bugs).
+> Further information about the Accessibility bugs on: [Bugs Section](https://github.com/anav-dev/runner-crush/blob/main/TESTING.md#bugs).
 
 ## Browsers Testing
 
@@ -134,7 +134,7 @@ Manual testing has been performed on the following web browsers: Google Chrome, 
 
 Additionally, testing has been carried out on the following phone devices: Xiaomi 12 Lite, Huawei P Smart and Samsung s14. When performing those phone tests a bug was found, the game squares are not draggable on small screens.
 
-> Further information about the bug found on: [Bugs Section](https://github.com/anav-dev/runner-crush/blob/main/assets/docs/test/TESTING.md#bugs).
+> Further information about the bug found on: [Bugs Section](https://github.com/anav-dev/runner-crush/blob/main/TESTING.md#bugs).
 
 Testing has taken into account a range of viewport sizes, including desktop, phone, and tablet dimensions.
 
