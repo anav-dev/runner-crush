@@ -206,7 +206,7 @@ This is a game where the player aims to match as many running objects as possibl
 
 ## Testing
 
-  Testing carried out to confirm the functionality of this site can be found in this separate file: [Testing.md](https://github.com/anav-dev/runner-crush/blob/main/assets/docs/test/TESTING.md)
+  Testing carried out to confirm the functionality of this site can be found in this separate file: [Testing.md](https://github.com/anav-dev/runner-crush/blob/main/TESTING.md)
 
 ## Technology 
 
