@@ -58,7 +58,7 @@
 
     After a peer-code-review request, the following issues were spotted by code peers feedback:
 
-    1. On Landing page, the bottom dropdown content gets cut.
+    1. On the Landing page, the bottom dropdown content gets cut on small screens.
 
         <details>
         <summary>Click here to see Dropdown CSS bug</summary>
@@ -68,7 +68,7 @@
 
         </details>
 
-    2. On Contact page, 'back-to-top' arrow has wrong style.
+    2. On the Contact page, 'back-to-top' arrow has wrong style on both big and small screens.
 
         <details>
         <summary>Click here to see Arrow CSS bug</summary>
@@ -113,9 +113,9 @@ The following tools have been used to ensure this site meets the required access
 
 ## Browsers Testing
 
-Manually testing has been performed on the following web browsers: Google Chrome, Safari, and Microsoft Edge.
+Manual testing has been performed on the following web browsers: Google Chrome, Safari, and Microsoft Edge.
 
-Additionally, testing has been carried out on the following phone devices: Xiaomi 12 Lite, Huawei P Smart and Samsung s14. Performing those phone tests a bug was found, the game squares are not draggable on small screens.
+Additionally, testing has been carried out on the following phone devices: Xiaomi 12 Lite, Huawei P Smart and Samsung s14. When performing those phone tests a bug was found, the game squares are not draggable on small screens.
 
 > Further information about the bug found on: [Bugs Section](https://github.com/anav-dev/runner-crush/blob/main/assets/docs/test/TESTING.md#bugs).
 
@@ -211,7 +211,7 @@ Testing has taken into account a range of viewport sizes, including desktop, pho
 
     1 Empty Link: The navbar contact icon link had no text so an `aria-label="An envelope icon"` attribute was also added so when a screen reader encounters the link, the aria-label text is read so that the user will know what it is.
 
-    2 Empty Buttons: Adding a `type="button"` attribute to the game over modal buttons was used to tell assistive technology that those element are a button used to perform an action.
+    2 Empty Buttons: Adding a `type="button"` attribute to the game over modal buttons was used to tell assistive technology that those element are buttons used to perform certain actions.
 
     <details>
     <summary>Click here to see improved Lighthouse check</summary>
@@ -221,11 +221,63 @@ Testing has taken into account a range of viewport sizes, including desktop, pho
 
     </details>
 
-- __Game Malfunction on touch devices__
+- __CSS Minor Issue__
 
-    The game can not run on touch devices. 
+    Issue 1: On the Landing page, the bottom dropdown content issue was fixed by incrementing the minimum height of the dropdown content box on the required media query for small screens, as follows: `.dropdown-menu { min-height: 310px; }`.
 
 
+## Unfixed Bugs
+
+Attemps to rectify the below bugs were made. However, they were unsuccessful, and the root cause of these issues remains unkown. Further research is required to resolve them.
+
+- __JS Bottom Match Issue__
+
+    No match is found in the bottom right corner of the board when occurs in the last column, or the last row. So, if a match occurs in squares 61, 62, or 63, or in the column containing squares 47, 55, or 63, it won't be counted.
+
+    <details>
+    <summary>Click here to see Issue</summary>
+    <br>
+
+    ![Match Issue](https://github.com/anav-dev/runner-crush/blob/main/assets/docs/test/js-bug-notmatch.jpg)
+
+    </details>
+
+    The issue might be caused by an error in both loop conditions, the ones in charge of setting till which square id the loop runs.
+
+- __JS Game Malfunction on touch devices__
+
+    The game can not run on touch devices as objects are not draggable nor droppable. 
+    
+    After some research, it seems that mobile browsers don’t support HTML5 drag-and-drop functionality.
+
+    Using JavaScript to polyfill on mobile devices was a potential solution found on:
+    [StackOverFLow](https://stackoverflow.com/questions/21350874/html5-drag-drop-for-mobile)
+
+    This article also helped to find the bug cause: [Forums.meteor.com](https://forums.meteor.com/t/solved-html5-drag-drop-touch/46178)
+
+- __JS Empty Objects on first row__
+
+    Sometimes when creating the game board, or after a row match is found on the first row, the new objects dropped appear empty as their HTML attribute `style` is empty, missing the CSS property `background-image` used to set a random image as the square background.
+
+    <details>
+    <summary>Click here to see Issue</summary>
+    <br>
+
+    ![Match Issue](https://github.com/anav-dev/runner-crush/blob/main/assets/docs/test/js-drop-objects.jpg)
+
+    </details>
+
+- __CSS Minor Issue__
+
+    Issue 2: On the Contact page, the 'back-to-top' arrow has the wrong style. It might have to do with its CSS style `padding: 1rem 15px;`.
+
+    <details>
+    <summary>Click here to see Arrow CSS bug</summary>
+    <br>
+
+    ![Arrow CSS bug](https://github.com/anav-dev/runner-crush/blob/main/assets/docs/test/css-bug-totop-arrow.png)
+
+    </details>
 
 ## Testing Tools
 

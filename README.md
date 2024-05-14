@@ -64,8 +64,8 @@ This is a game where the player aims to match as many running objects as possibl
 
   ![Colour Scheme](https://github.com/anav-dev/runner-crush/blob/main/assets/docs/features/color-scheme.jpg)
 
-  > [!NOTE]
-  > To improve accessibility the initial blue colour (#4741A6), used for the bottom box on the landing page, was replaced with a lighter one (#9BBBFC).
+> [!NOTE]
+> To improve accessibility the initial blue colour (#4741A6), used for the bottom box on the landing page, was replaced with a lighter one (#9BBBFC).
 
 
 - __Imagery__
@@ -272,6 +272,7 @@ This is a game where the player aims to match as many running objects as possibl
 - Tutorial.eyehunts: [Tutorial.eyehunts.com](https://tutorial.eyehunts.com/js/onclick-location-href-open-html-pages-website-on-a-button-click/)
 - Github: [Github Discussions](https://github.com/orgs/emailjs-com/discussions/67)
 - Codepen: [Codepen.io](https://codepen.io/kumar/pen/dWEgLg)
+- Forums Meteor: [Forums.meteor.com](https://forums.meteor.com/t/solved-html5-drag-drop-touch/46178)
 
   
 **Support & Advice**
