@@ -64,7 +64,7 @@
         <summary>Click here to see Dropdown CSS bug</summary>
         <br>
 
-        ![Dropdown CSS bug](https://github.com/anav-dev/runner-crush/blob/main/assets/docs/test/css-bug-dropdown.jpg)
+        ![Dropdown CSS bug](https://github.com/anav-dev/runner-crush/blob/main/assets/docs/test/css-bug-dropdown.jpeg)
 
         </details>
 
@@ -74,7 +74,7 @@
         <summary>Click here to see Arrow CSS bug</summary>
         <br>
 
-        ![Arrow CSS bug](https://github.com/anav-dev/runner-crush/blob/main/assets/docs/test/css-bug-totop-arrow.jpg)
+        ![Arrow CSS bug](https://github.com/anav-dev/runner-crush/blob/main/assets/docs/test/css-bug-totop-arrow.png)
 
         </details>
 
@@ -113,6 +113,13 @@ The following tools have been used to ensure this site meets the required access
 
 ## Browsers Testing
 
+Manually testing has been performed on the following web browsers: Google Chrome, Safari, and Microsoft Edge.
+
+Additionally, testing has been carried out on the following phone devices: Xiaomi 12 Lite, Huawei P Smart and Samsung s14. Performing those phone tests a bug was found, the game squares are not draggable on small screens.
+
+> Further information about the bug found on: [Bugs Section](https://github.com/anav-dev/runner-crush/blob/main/assets/docs/test/TESTING.md#bugs).
+
+Testing has taken into account a range of viewport sizes, including desktop, phone, and tablet dimensions.
 
 ## Bugs
 - __JS TypeError__
@@ -210,9 +217,14 @@ The following tools have been used to ensure this site meets the required access
     <summary>Click here to see improved Lighthouse check</summary>
     <br>
 
-    ![Lighthouse Testing improvement](https://github.com/anav-dev/runner-crush/blob/main/assets/docs/test/lighthouse-testing.jpg)
+    ![Lighthouse Testing improvement](https://github.com/anav-dev/runner-crush/blob/main/assets/docs/test/lighthouse-testing-2.jpg)
 
     </details>
+
+- __Game Malfunction on touch devices__
+
+    The game can not run on touch devices. 
+
 
 
 ## Testing Tools

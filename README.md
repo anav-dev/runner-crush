@@ -64,6 +64,9 @@ This is a game where the player aims to match as many running objects as possibl
 
   ![Colour Scheme](https://github.com/anav-dev/runner-crush/blob/main/assets/docs/features/color-scheme.jpg)
 
+  > [!NOTE]
+  > To improve accessibility the initial blue colour (#4741A6), used for the bottom box on the landing page, was replaced with a lighter one (#9BBBFC).
+
 
 - __Imagery__
   
