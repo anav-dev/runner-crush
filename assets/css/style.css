@@ -204,7 +204,7 @@ nav .fa-envelope:hover {
 
 
 .hover-blue {
-    font-size: 1.17em;
+    /* font-size: 1.17em; */
     font-weight: bold;
 }
 .hover-blue:hover {
@@ -464,6 +464,9 @@ textarea {
         font-size: 1.25em;
     }
 
+    .dropdown-menu {
+        min-height: 310px;
+    }
     .dropdown-content p {
         padding: 0 0 0 1rem;
         font-size: 16px;

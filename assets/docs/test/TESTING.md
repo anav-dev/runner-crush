@@ -5,8 +5,8 @@
 
 ---
 
-## Site Functionality Testing
-- __Automated Testing: HTML & CSS Validation__
+## Site Functionality Test
+- __Automated Test: HTML & CSS Validation__
 
     HTML and CSS code have been tested and validated by using: [W3C HTML](https://validator.w3.org/) and [W3C CSS](https://jigsaw.w3.org/css-validator/). 
 
@@ -21,7 +21,7 @@
     </details>
 
 
-- __Manual Testing__
+- __Manual Test__
 
     In order to ensure the proper functionality of this game, the following aspects have been tested manually: 
 
@@ -32,7 +32,7 @@
     5. Links: redirect to the corresponding site/section.
     6. Paths: set properly, no broken paths.
     7. Typos: absence of any typing error.
-    8. Contact Form & Success Alert & EmailJS Message: work and are correctly displayed.
+    8. Contact form, success alert and EmailJS message: work and are correctly displayed.
    
     
     The bellow table shows manual tests performanced:
@@ -54,20 +54,62 @@
     | 13. Click content typos  | No typing mistakes     | Pass    |
 
 
-- __Peer-code-review Testing | Slack Community__
+- __Peer-code-review Test | Slack Community__
 
     After a peer-code-review request, the following issues were spotted by code peers feedback:
 
-    1. 
-    2. 
-    3. 
+    1. On Landing page, the bottom dropdown content gets cut.
+
+        <details>
+        <summary>Click here to see Dropdown CSS bug</summary>
+        <br>
+
+        ![Dropdown CSS bug](https://github.com/anav-dev/runner-crush/blob/main/assets/docs/test/css-bug-dropdown.jpg)
+
+        </details>
+
+    2. On Contact page, 'back-to-top' arrow has wrong style.
+
+        <details>
+        <summary>Click here to see Arrow CSS bug</summary>
+        <br>
+
+        ![Arrow CSS bug](https://github.com/anav-dev/runner-crush/blob/main/assets/docs/test/css-bug-totop-arrow.jpg)
+
+        </details>
+
+    <br>
+
+    > Further information about the above bugs on: [Bugs Section](https://github.com/anav-dev/runner-crush/blob/main/assets/docs/test/TESTING.md#bugs).
     
 
-## Responsiveness Testing
+## Responsiveness Test
 
+The site responsiveness was tested by using [Ui.dev](https://ui.dev/amiresponsive) as well as Chrome Google Developer Tools checking how the site react to different screen sizes.  
 
-## Accessibility Test Testing
+<details>
+<summary>Click here to see Site's Responsiveness</summary>
+<br>
 
+![Responsiveness](https://github.com/anav-dev/runner-crush/blob/main/assets/docs/mockup/site-mockup-2.jpg)
+
+</details>
+
+## Accessibility Test
+
+The following tools have been used to ensure this site meets the required accessibility standars: [Lighthouse](https://developer.chrome.com/docs/lighthouse#:~:text=Lighthouse%20has%20audits%20for%20performance,or%20as%20a%20Node%20module.) and 
+[Wave.org](https://wave.webaim.org/)
+
+<details>
+<summary>Click here to see testing results below</summary>
+<br>
+
+![Wave Testing](https://github.com/anav-dev/runner-crush/blob/main/assets/docs/test/wave-testing.jpg)
+![Lighthouse Testing](https://github.com/anav-dev/runner-crush/blob/main/assets/docs/test/lighthouse-testing.jpg)
+
+</details>
+
+> Further information about the Accessibility bugs on: [Bugs Section](https://github.com/anav-dev/runner-crush/blob/main/assets/docs/test/TESTING.md#bugs).
 
 ## Browsers Testing
 
@@ -156,6 +198,11 @@
 
     </details>
 
+- __Accessibility Errors__
+
+    Contrast Errors: The contrast between the 'FAQs' section text and the background colours was very low. To improve accessibility the initial chosen background colour `#4741A6` was replaced with a lighter blue tone `#9BBBFC` so that users with visual impairments can now read them easily.
+
+    Empty Link and Buttons: The navbar contact icon link and the game over modal buttons had no text, so the alt attribute with a describing text that presents the functionality of the link and the buttons were added to avoid confusion for screen reader users.
 
 
 ## Testing Tools
