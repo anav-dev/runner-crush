@@ -296,6 +296,10 @@ Attemps to rectify the below bugs were made. However, they were unsuccessful, an
 
     </details>
 
+## Video Testing Site
+
+**Click the following link to see video testing this site**: [Testing Video](https://vimeo.com/946202172?share=copy)
+
 ## Testing Tools
 
 - [W3C HTML](https://validator.w3.org/)
