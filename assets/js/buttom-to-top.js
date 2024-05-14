@@ -19,23 +19,7 @@ window.addEventListener('scroll', function()
                     top: 0,
                     behavior: 'smooth'
                 }
-            )
-        })
-})
+            );
+        });
+});
 
-
-// // function myScrollFunc () 
-// // {
-// //     const y = window.scrollY;
-
-// //     // when scroll down 20px from the top of the document, show button
-// //     if (y >= 20) {
-// //         toTopButton.className = "show"
-// //     } else {
-// //         toTopButton.className = "hidden"
-// //     }
-// // };
-
-// window.addEventListener("scroll", myScrollFunc);
-
-// 2. function to scroll to the document top on click button

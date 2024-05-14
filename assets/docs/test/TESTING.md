@@ -1,5 +1,10 @@
 # Runner Crush Testing
 
+**Click here to see live site**: [Runner Crush](https://anav-dev.github.io/runner-crush/)
+
+---
+
+
 ![Site Mockup](https://github.com/anav-dev/runner-crush/blob/main/assets/docs/mockup/site-mockup.jpg)
 
 
@@ -8,15 +13,27 @@
 ## Site Functionality Test
 - __Automated Test: HTML & CSS Validation__
 
-    HTML and CSS code have been tested and validated by using: [W3C HTML](https://validator.w3.org/) and [W3C CSS](https://jigsaw.w3.org/css-validator/). 
+    HTML and CSS code have been tested and validated by using: [W3C HTML Validator](https://validator.w3.org/), [W3C CSS Validator](https://jigsaw.w3.org/css-validator/) and [JSHint JavaScript Validator](https://jshint.com/). 
 
     <details>
-    <summary>Click here to see Validation Results</summary>
+    <summary>Click here to see HTML and CSS Results</summary>
     <br>
 
     ![HTML Validation](https://github.com/anav-dev/runner-crush/blob/main/assets/docs/test/W3C-HTML-Validator.jpg)
 
     ![CSS Validation](https://github.com/anav-dev/runner-crush/blob/main/assets/docs/test/W3C-CSS-Validator.jpg)
+
+    </details>
+
+    <details>
+    <summary>Click here to see JavaScript JSHint Results</summary>
+    <br>
+
+    ![Game Script Test](https://github.com/anav-dev/runner-crush/blob/main/assets/docs/test/jshint-game-validator.jpg)
+
+    ![Form Script Test](https://github.com/anav-dev/runner-crush/blob/main/assets/docs/test/jshint-form-validator.jpg)
+
+    ![Arrow Script Test](https://github.com/anav-dev/runner-crush/blob/main/assets/docs/test/jshint-arrow-validator.jpg)
 
     </details>
 
@@ -283,6 +300,7 @@ Attemps to rectify the below bugs were made. However, they were unsuccessful, an
 
 - [W3C HTML](https://validator.w3.org/)
 - [W3C CSS](https://jigsaw.w3.org/css-validator/)
+- [JSHint JavaScript](https://jshint.com/)
 - [Ui.dev](https://ui.dev/amiresponsive)
 - [Lighthouse](https://developer.chrome.com/docs/lighthouse#:~:text=Lighthouse%20has%20audits%20for%20performance,or%20as%20a%20Node%20module.)
 - [Wave.org](https://wave.webaim.org/)

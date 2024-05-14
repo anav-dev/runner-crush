@@ -7,8 +7,8 @@ function openDropdownInstructions()
     const dropdownInstructions = document.getElementById('dropdownInstructions');
 
     // if dropdown is displayed, hide arrow icon and show x mark
-    const arrow = document.getElementsByClassName('fa-angle-down')[0]
-    const xmark = document.getElementsByClassName('fa-xmark')[0]
+    const arrow = document.getElementsByClassName('fa-angle-down')[0];
+    const xmark = document.getElementsByClassName('fa-xmark')[0];
 
     if(dropdownInstructions.style.display === "block")
     {
@@ -28,14 +28,14 @@ function openDropdownFaq()
     const dropdownFaq = document.getElementById('dropdownFaq');
 
     // if dropdown is displayed, hide arrow icon and show x mark
-    const arrow = document.getElementsByClassName('fa-angle-down')[1]
-    const xmark = document.getElementsByClassName('fa-xmark')[1]
+    const arrow = document.getElementsByClassName('fa-angle-down')[1];
+    const xmark = document.getElementsByClassName('fa-xmark')[1];
 
     if(dropdownFaq.style.display === "block")
     {
         dropdownFaq.style.display = "none";
-        arrow.style.display = 'inline-block'
-        xmark.style.display = 'none'
+        arrow.style.display = 'inline-block';
+        xmark.style.display = 'none';
     } else
     {
         dropdownFaq.style.display = "block";
@@ -57,7 +57,7 @@ openGameButton.addEventListener("click", () =>
 {
     introModal.style.display = "none";
     gameModal.style.display = "inline-block";
-})
+});
 
 
 /*** Game Page ***/
@@ -87,7 +87,7 @@ document.addEventListener(domLoaded, () =>
         'url(assets/images/phone.png)',
         'url(assets/images/watch.png)',
         'url(assets/images/water.png)',
-    ]
+    ];
 
     // 1. create game board: a 8x8 grid of div elements with the class 'grid'
     function createBoard()
@@ -201,6 +201,8 @@ document.addEventListener(domLoaded, () =>
     // 4. function to drop objects after a match found
     function moveDown()
     {
+        let i;
+
         for(i = 0; i < 55; i++) // check squares below each index for an empty square
         {
             if(squares[i + width].style.backgroundImage === '') // check if below square bg color is empty
@@ -226,6 +228,8 @@ document.addEventListener(domLoaded, () =>
     //  check row of three
     function checkRowForThree()
     {
+        let i;
+
         for(i = 0; i < 61; i++) // last square to loop over is 61 as there are 64 squares in totals
         {
             let rowOfThree = [i, i + 1, i + 2]; // define row
@@ -235,7 +239,7 @@ document.addEventListener(domLoaded, () =>
             const notValid = [6, 7, 14, 15, 22, 23, 30, 31, 38, 39, 46, 47, 54, 55 ]; // define array of indexes not valid for checking a row match
             if(notValid.includes(i)) // check if index is a not valid index
                 {
-                    continue // move to next iteration
+                    continue; // move to next iteration
                 }
 
             
@@ -247,7 +251,7 @@ document.addEventListener(domLoaded, () =>
                     rowOfThree.forEach(index => // if match found, take row of three array and give empty bg color for every index in it
                         { 
                             squares[index].style.backgroundImage = '';
-                        }) 
+                        });
                 }
         }
     }
@@ -257,6 +261,8 @@ document.addEventListener(domLoaded, () =>
     //  check column of three
     function checkColumnForThree()
     {
+        let i;
+        
         for(i = 0; i < 47; i++) // last column square to loop over is 47
         {
             let columnOfThree = [i, i + width, i + width * 2]; // define column array
@@ -271,7 +277,7 @@ document.addEventListener(domLoaded, () =>
                     columnOfThree.forEach(index => // if match found, take column of three array and give empty bg color for every index in it
                         { 
                             squares[index].style.backgroundImage = '';
-                        }) 
+                        });
                 }
         }
     }
@@ -284,7 +290,7 @@ document.addEventListener(domLoaded, () =>
         moveDown();
         checkRowForThree();
         checkColumnForThree();
-    }, 100)
+    }, 100);
 
     /* End code inspiration source: Ania Kubow tutorial */
 
