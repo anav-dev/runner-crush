@@ -328,7 +328,7 @@ Attemps to rectify the below bugs were made. However, they were unsuccessful, an
 
 ## Video Testing Site
 
-**Click the following link to see video testing this site**: [Testing Video](https://vimeo.com/946202172?share=copy)
+**Click the following link to see video testing this site**: [Testing Video](https://www.loom.com/share/86b2225da14c438f8fb8d31513f705df?sid=766eab0d-26be-45ae-b00e-d50615427730)
 
 ## Testing Tools
 
@@ -338,3 +338,4 @@ Attemps to rectify the below bugs were made. However, they were unsuccessful, an
 - [Ui.dev](https://ui.dev/amiresponsive)
 - [Lighthouse](https://developer.chrome.com/docs/lighthouse#:~:text=Lighthouse%20has%20audits%20for%20performance,or%20as%20a%20Node%20module.)
 - [Wave.org](https://wave.webaim.org/)
+- [Loom.com](https://www.loom.com/)
