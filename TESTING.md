@@ -276,11 +276,6 @@ Testing has taken into account a range of viewport sizes, including desktop, pho
 
     </details>
 
-
-## Unfixed Bugs
-
-Attemps to rectify the below bugs were made. However, they were unsuccessful, and the root cause of these issues remains unkown. Further research is required to resolve them.
-
 - __JS Bottom Match Issue__
 
     No match is found in the bottom right corner of the board when occurs in the last column, or the last row. So, if a match occurs in squares 61, 62, or 63, or in the column containing squares 47, 55, or 63, it won't be counted.
@@ -293,7 +288,14 @@ Attemps to rectify the below bugs were made. However, they were unsuccessful, an
 
     </details>
 
-    The issue might be caused by an error in both loop conditions, the ones in charge of setting till which square id the loop runs.
+    The issue was caused by an error in both loop conditions, the ones in charge of setting till which square ID the loop runs. By adding the `<=` operator in both loop conditions, the boundary values were included so a row or column match now can be detected in the bottom game board.
+
+    The above change implied also an update of the `moveDown()` function, also adding the `<=` operator to ensure the last board square would also be included and if empty, it would be also replaced with the above object.
+
+
+## Unfixed Bugs
+
+Attemps to rectify the below bugs were made. However, they were unsuccessful, and the root cause of these issues remains unkown. Further research is required to resolve them.
 
 - __JS Game Malfunction on touch devices__
 

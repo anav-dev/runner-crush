@@ -203,12 +203,12 @@ document.addEventListener(domLoaded, () =>
     {
         let i;
 
-        for(i = 0; i < 55; i++) // check squares below each index for an empty square
+        for(i = 0; i <= 55; i++) // check squares below each index for an empty square
         {
             // if first row contains an empty square, needs to be filled with a colored one until first row is not empty
             const firstRow = [0, 1, 2, 3, 4, 5, 6, 7];
             const isFirstRow = firstRow.includes(i);
-            
+
             if(isFirstRow && squares[i].style.backgroundImage === '')
                 {
                     let randomColor = Math.floor(Math.random() * runnerObjects.length); // get random number from objects array
@@ -231,7 +231,7 @@ document.addEventListener(domLoaded, () =>
     {
         let i;
 
-        for(i = 0; i < 61; i++) // last square to loop over is 61 as there are 64 squares in totals
+        for(i = 0; i <= 61; i++) // last square to loop over is 61 as there are 64 squares in totals
         {
             let rowOfThree = [i, i + 1, i + 2]; // define row
             let decidedColor = squares[i].style.backgroundImage; // grab color of first square and assign to decided color
@@ -264,7 +264,7 @@ document.addEventListener(domLoaded, () =>
     {
         let i;
         
-        for(i = 0; i < 47; i++) // last column square to loop over is 47
+        for(i = 0; i <= 47; i++) // last column square to loop over is 47
         {
             let columnOfThree = [i, i + width, i + width * 2]; // define column array
             let decidedColor = squares[i].style.backgroundImage; // grab color of first square and assign to decided color
