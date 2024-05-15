@@ -199,6 +199,8 @@ This is a game where the player aims to match as many running objects as possibl
 
   Ranking Players Score: Creating another JavaScript modal that contains the best ranking players' scores so users' engagement activity can be increased.
 
+  Plus Time: Adding extra time when a match is found, for example adding 3 extra seconds when a match is found.
+
   Video Tutorial: Adding a video of how to play the game to show a visual game example to users and clarify the instructions. It might be placed inside the landing page Instructions dropdown box if styling correctly.
 
   Error Page: Making a special page for errors, like when a page isn't found (404 error), to help users find their way around more easily.
