@@ -288,9 +288,15 @@ Testing has taken into account a range of viewport sizes, including desktop, pho
 
     </details>
 
-    The issue was caused by an error in both loop conditions, the ones in charge of setting till which square ID the loop runs. By adding the `<=` operator in both loop conditions, the boundary values were included so a row or column match now can be detected in the bottom game board.
+    The issue was caused by an error in both loop conditions, the ones in charge of setting till which square ID the loop runs. By adding the `<=` operator in both loop conditions, the boundary values were included so a row or column match now can be detected in the bottom game board. 
+    
+    Code update on checkColumnForThree() loop: `for(i = 0; i <= 47; i++)`.
 
-    The above change implied also an update of the `moveDown()` function, also adding the `<=` operator to ensure the last board square would also be included and if empty, it would be also replaced with the above object.
+    Code update on checkRowForThree() loop: `for(i = 0; i <= 61; i++)`.
+
+    The above changes implied also an update of the `moveDown()` function, also adding the `<=` operator to ensure the last board square would also be included and if empty, it would be also replaced with the above object.
+
+    Code update on moveDown() loop: `for(i = 0; i <= 55; i++)`.
 
 
 ## Unfixed Bugs
