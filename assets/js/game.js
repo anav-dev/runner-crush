@@ -3,7 +3,6 @@
 // dropdown box functionality
 function openDropdownInstructions()
 {
-    //console.log('clicked')
     const dropdownInstructions = document.getElementById('dropdownInstructions');
 
     // if dropdown is displayed, hide arrow icon and show x mark
@@ -67,8 +66,6 @@ const domLoaded = "DOMContentLoaded";
 // add event listener to the domLoaded variable so when HTML file is read and loaded, executes function
 document.addEventListener(domLoaded, () =>
 {
-    //console.info("DOM fully loaded");
-
     const grid = document.querySelector('.grid');
 
     const scoreDisplayed = document.getElementById('score');
@@ -128,40 +125,32 @@ document.addEventListener(domLoaded, () =>
     // select dragged object's color and square's id integer
     function dragStart()
     {
-        //console.log(this.id, 'dragstart')
-
         objectBeingDragged = this.style.backgroundImage; // store color dragged into a variable
-        //console.log(objectBeingDragged);
+
         squareIdBeingDragged = parseInt(this.id); // assign square dragged id to this square id integer
     }
 
     // prevent default action when object is moved
     function dragOver(e)
     {
-        //console.log(this.id, 'dragover')
-
         e.preventDefault();
     }
 
     // prevent default action when object is placed
     function dragEnter(e)
     {
-        //console.log(this.id, 'dragenter')
-
         e.preventDefault();
     }
 
     // place back an object to original place when object is left
     function dragLeave()
     {
-        //console.log(this.id, 'dragleave')
+
     }
 
     // give selected square being dragged other color when object is dropped
     function dragDrop()
     {
-        //console.log(this.id, 'drop')
-
         objectBeingReplaced = this.style.backgroundImage; // store color
         squareIdBeingReplaced = parseInt(this.id); // assign this square id integer to variable
         this.style.backgroundImage = objectBeingDragged; // change square color into color being dragged
@@ -171,8 +160,6 @@ document.addEventListener(domLoaded, () =>
     // handle the ending of the drag
     function dragEnd()
     {
-        //console.log(this.id, 'dragend')
-
         // define array that contains squares' IDs where the dragged object can be moved
         let validMoves = [
             squareIdBeingDragged -1,
