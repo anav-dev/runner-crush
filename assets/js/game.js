@@ -300,7 +300,7 @@ document.addEventListener(domLoaded, () =>
         {
             score = 0;
             scoreDisplayed.innerHTML = score;
-        })
+        });
 
     // 5. function for timer countdown 
     const timerDisplay = document.querySelector("#timer");
@@ -348,7 +348,7 @@ document.addEventListener(domLoaded, () =>
     playAgainButton.addEventListener("click", playAgain);
 
 
-})
+});
 
 
 
