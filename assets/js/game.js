@@ -329,7 +329,7 @@ document.addEventListener(domLoaded, () =>
 
         score = 0;
         scoreDisplayed.innerHTML = score;
-        timer = 20;
+        timer = 30;
     }
 
     playAgainButton.addEventListener("click", playAgain);
