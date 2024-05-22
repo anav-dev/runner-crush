@@ -265,6 +265,8 @@ This is a game where the player aims to match as many running objects as possibl
 - Coding Nepal: [CodingNepal](https://www.codingnepalweb.com/login-signup-form-html-css-javascript/)
 - FreeCodeCamp: [FreeCodeCamp.org](https://www.freecodecamp.org/news/how-to-build-a-modal-with-javascript/)
 - EmailJS: [EmailJS](https://www.emailjs.com/)
+- Learn Git Branching: [Learngitbranching.js.org](https://learngitbranching.js.org/)
+- Bernardo Castilho: [Bernardo Castilho Github](https://github.com/Bernardo-Castilho/dragdroptouch)
 
 
 **Troubleshooting**
