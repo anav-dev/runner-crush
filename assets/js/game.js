@@ -291,7 +291,7 @@ document.addEventListener(domLoaded, () =>
 
     // 5. function for timer countdown 
     const timerDisplay = document.querySelector("#timer");
-    let timer = 20;
+    let timer = 30;
 
     function countDown()
     {
