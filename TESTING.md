@@ -298,21 +298,18 @@ Testing has taken into account a range of viewport sizes, including desktop, pho
 
     Code update on moveDown() loop: `for(i = 0; i <= 55; i++)`.
 
+- __JS Game Malfunction on touch devices__
+
+    The game could not run on touch devices as objects are not draggable nor droppable. After some research, it seems that mobile browsers don’t support HTML5 drag-and-drop functionality.
+
+    Using JavaScript to polyfill on mobile devices was a potential solution found on:
+    [StackOverFLow](https://stackoverflow.com/questions/21350874/html5-drag-drop-for-mobile). This article also discuss the bug cause: [Forums.meteor.com](https://forums.meteor.com/t/solved-html5-drag-drop-touch/46178)
+
+    This issue was sorted out by adding the js file called "drag-drop-touch.js", created by [Bernardo Castilho Github](https://github.com/Bernardo-Castilho/dragdroptouch).
 
 ## Unfixed Bugs
 
-Attemps to rectify the below bugs were made. However, they were unsuccessful, and the root cause of these issues remains unkown. Further research is required to resolve them.
-
-- __JS Game Malfunction on touch devices__
-
-    The game can not run on touch devices as objects are not draggable nor droppable. 
-    
-    After some research, it seems that mobile browsers don’t support HTML5 drag-and-drop functionality.
-
-    Using JavaScript to polyfill on mobile devices was a potential solution found on:
-    [StackOverFLow](https://stackoverflow.com/questions/21350874/html5-drag-drop-for-mobile)
-
-    This article also helped to find the bug cause: [Forums.meteor.com](https://forums.meteor.com/t/solved-html5-drag-drop-touch/46178)
+Attemps to rectify the below bug were made. However, they were unsuccessful, and the root cause of this issue remains unkown. Further research is required to resolve it.
 
 - __CSS Minor Issue__
 
